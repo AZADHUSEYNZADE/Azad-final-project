@@ -1,0 +1,616 @@
+.mainAboutDiv{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    .swiperAboutPro{
+        width: 584px;
+        height: 485px;
+        margin-top: 50px;
+    }
+    .firstSwiperAbout{
+        width: 484px;
+        height: 485px;
+    }
+    .firstSwiperSlideAboutImage{
+        width: 300px;
+        height: 300px;
+        display: flex;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+    .secondSwiperAbout{
+        width: 484px;
+        height: 485px;
+
+    }
+    .secondSwiperSlideAboutImage{
+        width: 72px;
+        height: 86px;
+        border-radius: 4px;
+        margin-top: 80px;
+        cursor: pointer;
+    }
+    
+    .nameOfProduct{
+        font-size:20px;
+        line-height: 28px;
+        font-weight: 500;
+        color: #333333;
+    }
+    .count226{
+        font-size:12px;
+        line-height: 16px;
+        font-weight: 400;
+        color: #4F4F4F;
+        margin-left: 10px;
+        margin-top: 3px;
+    }
+    .countOfComments{
+        font-size:14px;
+        line-height: 16px;
+        font-weight: 500;
+        color: #2D9CDB;
+        cursor: pointer;
+        margin-left: 15px;
+        margin-top: 3px;
+
+    }
+    .oldCost{
+        text-decoration:line-through;
+        font-size:16px;
+        line-height: 24px;
+        font-weight: 500;
+        color: #828282;
+    }
+    .newCost{
+        font-size:20px;
+        line-height: 28px;
+        font-weight: 500;
+        color: #DB2C66;
+        margin-left: 5px;
+    }
+    .color{
+        font-size:14px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #4F4F4F;
+    }
+    .memory{
+        font-size:14px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #4F4F4F;
+    }
+    .commentsDiv{
+        display: flex;
+        margin-top: 17px;
+    }
+   .commentsDiv img{
+       margin-left: 5px;
+   }
+   .costs{
+       margin-top: 25px;
+   }
+   .colorsDiv{
+       display: flex;
+       flex-direction: row;
+       margin-top: 35px;
+   .color{
+       margin-top: 5px;
+   }
+}
+.colorsName{
+    margin-left: 20px;
+    cursor: pointer;
+
+}
+.mainMemoryDiv{
+ margin-top: 20px;   
+}
+.memory{
+    color:#4F4F4F; 
+    font-size:14px ;
+    line-height: 20px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+   .firstMemory{
+    width: 76px;
+    height: 36px;
+    background: #4F4F4F;
+    color:#FFFFFF ;
+    font-size:14px ;
+    line-height: 20px;
+    font-weight: 400;
+    padding:  5px 10px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+
+}
+.secondMemory{
+    width: 76px;
+    height: 36px;
+    background: #F2F2F2;
+    color:#4F4F4F; ;
+    font-size:14px ;
+    line-height: 20px;
+    font-weight: 400;
+    padding:  5px 10px;
+    border-radius: 4px;
+    margin-left: 15px;
+    cursor: pointer;
+
+}
+.thirdMemory{
+    width: 76px;
+    height: 36px;
+    background: #828282;
+    color:#FFFFFF; 
+    font-size:14px ;
+    line-height: 20px;
+    font-weight: 400;
+    padding:  5px 10px;
+    border-radius: 4px;
+    margin-left: 15px;
+    cursor: pointer;
+
+
+}
+.fourthMemory{
+    width: 76px;
+    height: 36px;
+    background: #F2F2F2;
+    color:#4F4F4F; 
+    font-size:14px ;
+    line-height: 20px;
+    font-weight: 400;
+    padding:  5px 10px;
+    border-radius: 4px;
+    margin-left: 15px;
+    cursor: pointer;
+
+}
+.line{
+    width: 592px;
+    height: 1px;
+    background-color: #E0E0E0;
+    margin-top: 24px;
+}
+.incremenetAndDicrement{
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    button{
+        width: 32px;
+        height: 32px;
+        background: #F2F2F2;
+        color:#4F4F4F; 
+        font-size:16px ;
+        line-height: 20px;
+        font-weight: 600;
+        padding:  5px 10px;
+        border-radius:20px;
+        cursor: pointer;
+    }
+    .weight{
+        display: none;
+    }
+   
+}
+.count{
+    margin-left: 30px;
+}
+.increment{
+    margin-left: 30px;
+    cursor: pointer;
+
+}
+.addDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 200px;
+    height: 48px;
+    background-color: #2DD06E;
+    margin-top: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    img{
+        width: 20px;
+        height: 25px;
+        margin-top: 10px;
+    }
+    button{
+        font-size:14px;
+        line-height: 16px;
+        font-weight: 500;
+        color: #FFFFFF;
+        margin-left: 15px;
+      
+    }
+}
+}
+.commentsAndFeatures{
+    display:flex;
+    flex-direction:row;
+    margin-top: 50px;
+}
+.techFeat{
+    margin-left: 30px;
+}
+.commentUnderSide{
+    margin-left: 200px;
+}
+.line2{
+    height: 1px;
+    background-color: #BDBDBD;
+}
+.mainAndAbout{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.titleFeatures{
+    display: block;
+    margin-left: 120px;
+    font-weight: bold;
+}
+.hiMan{
+    width: 50%;
+}
+
+.leftSideFeatures{
+    display: flex;
+        justify-content: space-around;
+        p{
+            padding: 10px 0px;
+        }
+}
+.titleAdvantages{
+    font-weight: bold;
+}
+.advantageText{
+    margin-top: 30px;
+}
+.advantageTextMobile{
+    display: none;
+}
+.detailFooter{
+    margin-top: 50px;
+}
+.titleFeaturesMobile{
+    display: none;
+}
+.part1Left , .part1Right , .part1RightLast{
+    display: none;
+}
+.titleAdvantagesMobile{
+    display: none;
+}
+@media only screen and (max-width: 600px) {
+    .mainAboutDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+        .mySwiper2{
+            z-index: 0;
+        }
+
+        .swiperAboutPro{
+            width: 384px;
+            height: 268px;
+            margin-top: 0px;
+        }
+        .firstSwiperAbout{
+            width: 152px;
+            height: 268px;
+            z-index: 0;
+        }
+        .firstSwiperSlideAboutImage{
+            width: 153px;
+            height: 174px;
+            display: flex;
+            margin: 0 auto;
+        }
+        .secondSwiperAbout{
+            width: 484px;
+            height: 48px;
+            z-index: 0;
+        }
+        .secondSwiperSlideAboutImage{
+            width: 40px;
+            height: 48px;
+            border-radius: 4px;
+            margin-top: 36px;
+            margin-left: 10px;
+    
+        }
+        
+    }
+    .rightSideAbout{
+        margin-top: 20px;
+    
+    .nameOfProduct{
+        font-size:16px;
+        line-height: 24px;
+        font-weight: 500;
+        color: #333333;
+
+        margin-left: 15px;
+    }
+    .longName{
+        display: none;
+    }
+   .commentsDiv img{
+       display: none;
+   }
+    .count226{
+        font-size:12px;
+        line-height: 16px;
+        font-weight: 400;
+        color: #4F4F4F;
+        margin-left: 10px;
+        margin-top: 3px;
+        display: none;
+    }
+    .countOfComments{
+        font-size:14px;
+        line-height: 16px;
+        font-weight: 500;
+        color: #2D9CDB;
+        cursor: pointer;
+        margin-left: 15px;
+        margin-top: 3px;
+        display: none;
+
+    }
+    .costs{
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-between;
+        margin-top: 0px;
+    }
+    .mobileButton{
+        width: 180px;
+        height: 48px;
+        background-color: #2DD06E;
+        border-radius: 8px;
+        cursor: pointer;
+
+    }
+    .oldCost{
+        text-decoration:line-through;
+        font-size:16px;
+        line-height: 24px;
+        font-weight: 500;
+        color: #828282;
+        margin-left:20px;
+    }
+    .newCost{
+        font-size:18px;
+        line-height: 28px;
+        font-weight: 500;
+        color: #DB2C66;
+        margin-left: 15px;
+        display: block;
+    }
+    .color{
+        font-size:14px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #4F4F4F;
+        margin-left: 20px;
+    }
+    .memory{
+        font-size:14px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #4F4F4F;
+    }
+    .commentsDiv{
+        display: flex;
+        margin-top: 17px;
+    }
+   .commentsDiv img{
+       margin-left: 5px;
+   }
+   .costs{
+       margin-top: 25px;
+   }
+   .colorsDiv{
+       display: flex;
+       flex-direction: row;
+       margin-top: 35px;
+   .color{
+       margin-top: 5px;
+   }
+}
+.colorsName{
+    margin-left: 20px;
+    cursor: pointer;
+
+}
+.mainMemoryDiv{
+ margin-top: 20px; 
+ margin-left: 20px;  
+}
+.memory{
+    color:#4F4F4F; 
+    font-size:14px ;
+    line-height: 20px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+   .firstMemory{
+    width: 76px;
+    height: 36px;
+    background: #4F4F4F;
+    color:#FFFFFF ;
+    font-size:14px ;
+    line-height: 20px;
+    font-weight: 400;
+    padding:  5px 10px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+
+}
+.secondMemory{
+    width: 76px;
+    height: 36px;
+    background: #F2F2F2;
+    color:#4F4F4F; ;
+    font-size:14px ;
+    line-height: 20px;
+    font-weight: 400;
+    padding:  5px 10px;
+    border-radius: 4px;
+    margin-left: 15px;
+    cursor: pointer;
+
+}
+.thirdMemory{
+    width: 76px;
+    height: 36px;
+    background: #828282;
+    color:#FFFFFF; 
+    font-size:14px ;
+    line-height: 20px;
+    font-weight: 400;
+    padding:  5px 10px;
+    border-radius: 4px;
+    margin-left: 15px;
+    cursor: pointer;
+
+
+}
+.fourthMemory{
+    width: 76px;
+    height: 36px;
+    background: #F2F2F2;
+    color:#4F4F4F; 
+    font-size:14px ;
+    line-height: 20px;
+    font-weight: 400;
+    padding:  5px 10px;
+    border-radius: 4px;
+    margin-left: 15px;
+    cursor: pointer;
+    display: none;
+
+}
+.line{
+    display: none;
+    // width: 200px;
+    // height: 1px;
+    // background-color: #E0E0E0;
+    // margin-top: 24px;
+}
+.incremenetAndDicrement{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    button{
+        width: 32px;
+        height: 32px;
+        background: #F2F2F2;
+        color:#4F4F4F; 
+        font-size:16px ;
+        line-height: 20px;
+        font-weight: 600;
+        padding:  5px 10px;
+        border-radius:20px;
+        cursor: pointer;
+    }
+    .weight{
+        display: block;
+        color:#4F4F4F; 
+        font-size:14px ;
+        line-height: 20px;
+        font-weight: 400;
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+    .dicrement{
+        margin-left: 10px;
+    }
+   
+}
+.count{
+    margin-left: 30px;
+    font-weight: 600;
+}
+.increment{
+    margin-left: 30px;
+    cursor: pointer;
+
+}
+.addDiv{
+    display: none;
+   
+}
+}  
+.mainAndAbout{
+    display: none;
+}
+
+.techFeat{
+    font-size: 14px;
+}
+.commentUnderSide{
+    margin-right: 30px;
+    color:  #A8A8A8;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+}
+.leftSideFeaturesMobile{
+    display: flex;
+    justify-content: space-around;
+    p{
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #828282;
+        padding: 10px 0px;
+    }
+}
+.titleFeaturesMobile{
+    display: block;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 500;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+  .part1Left , .part1Right{
+      display: block;
+  }
+  .advantageTextMobile{
+      display: block;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      margin-left: 30px;
+      margin-top: 30px;
+      color: #828282;
+  }
+  .titleAdvantagesMobile{
+      display: block;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 500;
+      margin-left: 30px;
+      margin-top: 30px;
+  }
+  .part1RightLast{
+      display: block;
+      margin-bottom: 80px;
+  }
+}

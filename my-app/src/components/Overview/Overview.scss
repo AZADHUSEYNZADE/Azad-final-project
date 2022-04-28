@@ -1,0 +1,82 @@
+.overview {
+  display: flex;
+  max-width: 1270px;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  .col {
+    width: 50%;
+    max-width: 592px;
+    aspect-ratio: 1 / 1.23;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    > div {
+      padding: 2.5rem 2rem;
+      h2 {
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+      p {
+        font-weight: 300;
+        font-size: 1.05rem;
+        margin-bottom: 1rem;
+      }
+      button {
+        font-size: 1rem;
+        color: blue;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
+    .lg-overview {
+      background-image: url("../../assets/Images/xiaomi.png"),
+        linear-gradient(
+          150.83deg,
+          rgba(245, 146, 146, 0.3) 0%,
+          rgba(244, 194, 194, 0.25) 52.95%,
+          rgba(242, 242, 242, 0) 100%
+        );
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-size: contain;
+      flex: 1;
+    }
+    .sm-overview:first-child {
+      background-image: url("../../assets/Images/smart-watch.png"),
+        linear-gradient(
+          150.83deg,
+          rgba(245, 146, 146, 0.3) 0%,
+          rgba(244, 194, 194, 0.25) 52.95%,
+          rgba(242, 242, 242, 0) 100%
+        );
+      background-position: bottom right;
+      background-repeat: no-repeat;
+      background-size: contain;
+      flex: 1;
+    }
+    .sm-overview:last-child {
+      background-image: url("../../assets/Images/accessories.png"),
+        linear-gradient(
+          150.83deg,
+          rgba(245, 146, 146, 0.3) 0%,
+          rgba(244, 194, 194, 0.25) 52.95%,
+          rgba(242, 242, 242, 0) 100%
+        );
+      background-position: bottom right;
+      background-repeat: no-repeat;
+      background-size: contain;
+      flex: 1;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    .col {
+      width: 100%;
+      .sm-overview {
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+@import url("http://fonts.cdnfonts.com/css/euclid-circular-a");
+@import '../../myscssfolder/_mixins.scss';
+@import '../../myscssfolder/_variables.scss';
+#app { height: 100% }
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body{
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  @include marginAndPadding-0;
+  
+}
+
+.mainHeroDiv{
+  @include displayFlexAndRow;
+  justify-content: center;
+  background-image: url('../../assets/Images/bgHero.png');
+  z-index:0;
+ @include backgroundProperties;
+  width: 100%;
+  height: 652px;
+ .mySwiper2 {
+  width: 100%;
+  height: 100%;
+  @include displayFlexAndRow;
+  padding-bottom: 5px;
+  z-index: 0;
+ 
+  .swiper{
+    z-index: -1;
+  }
+  .swiper-slide {
+  text-align: $textAlignCenter;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ img {
+  display: block;
+  width: 480px;
+  height: 437px;
+  object-fit: cover;
+  @include marginAndPadding-0;
+
+ }
+    h3{
+    color: black;
+    font-size: 48px;
+    line-height: 64px;
+    font-weight: 600;
+    text-align: $textAlignLeft;
+    @include marginAndPadding-0;
+
+    }
+    p{
+      color: black;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 400;
+      text-align: $textAlignLeft;
+      
+    }
+  }
+}
+
+}
+
+
+@media only screen and (max-width: 600px) {
+  .mainHeroDiv{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+
+ 
+    width: 100%;
+    height: 65vh;
+   .mySwiper2 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+  
+    
+    .swiper-slide {
+    text-align: $textAlignCenter;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    
+   img {
+    display: block;
+    width: 231px;
+    height: 216px;
+   
+   }
+      h3{
+      color: black;
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 600;
+      text-align: $textAlignCenter;
+      @include marginAndPadding-0;
+      margin-top: 0px;
+      }
+      p{
+        color: black;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        text-align: $textAlignCenter;
+        padding: 0px 10px;
+        
+      }
+    }
+  }
+  
+  }
+
+}
+

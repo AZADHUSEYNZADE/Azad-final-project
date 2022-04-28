@@ -1,0 +1,166 @@
+@import url("http://fonts.cdnfonts.com/css/euclid-circular-a");
+#app {
+  height: 100%;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.mainHeroDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url("../../assets/Images/bgHero.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 652px;
+}
+
+.mainHeroDiv .mySwiper2 {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-bottom: 5px;
+  z-index: 0;
+}
+
+.mainHeroDiv .mySwiper2 .swiper {
+  z-index: -1;
+}
+
+.mainHeroDiv .mySwiper2 .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainHeroDiv .mySwiper2 .swiper-slide img {
+  display: block;
+  width: 480px;
+  height: 437px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.mainHeroDiv .mySwiper2 .swiper-slide h3 {
+  color: black;
+  font-size: 48px;
+  line-height: 64px;
+  font-weight: 600;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.mainHeroDiv .mySwiper2 .swiper-slide p {
+  color: black;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+  .mainHeroDiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 65vh;
+  }
+  .mainHeroDiv .mySwiper2 {
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .mainHeroDiv .mySwiper2 .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .mainHeroDiv .mySwiper2 .swiper-slide img {
+    display: block;
+    width: 231px;
+    height: 216px;
+  }
+  .mainHeroDiv .mySwiper2 .swiper-slide h3 {
+    color: black;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-top: 0px;
+  }
+  .mainHeroDiv .mySwiper2 .swiper-slide p {
+    color: black;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: center;
+    padding: 0px 10px;
+  }
+}
+/*# sourceMappingURL=hero.css.map */

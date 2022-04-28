@@ -1,0 +1,105 @@
+@import url("http://fonts.cdnfonts.com/css/euclid-circular-a");
+.mainProducts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+}
+
+.mainProducts > div {
+  width: 20%;
+}
+
+.mainProducts .lookAllIcon {
+  margin-left: 15px;
+}
+
+.mainProducts .lookAllParagraphMobile {
+  display: none;
+}
+
+.mainProducts .acsTitles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 0px;
+}
+
+.mainProducts .acsTitles .myAccParagraph {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  color: #333333;
+  margin-left: 110px;
+  margin-top: 70px;
+}
+
+.mainProducts .acsTitles .lookAllParagraph {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #333333;
+  margin-left: 110px;
+  margin-top: 70px;
+  margin-right: 115px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.25rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .acsTitles {
+    display: block;
+  }
+  .acsTitles .myAccParagraph {
+    margin-top: 40px;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 30px;
+  }
+  .acsTitles .lookAllParagraph {
+    display: none;
+  }
+  .mainProducts {
+    width: 100%;
+    overflow-x: scroll;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    height: 350px;
+  }
+  .lookAllParagraphMobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-top: 0px;
+    color: #333333;
+  }
+  .lookAllIconMobile {
+    margin-left: 15px;
+  }
+}
+/*# sourceMappingURL=accProducts.css.map */

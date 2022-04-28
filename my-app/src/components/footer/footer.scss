@@ -1,0 +1,210 @@
+@import url("http://fonts.cdnfonts.com/css/euclid-circular-a");
+@import "../../myscssfolder/_variables.scss";
+@import "../../myscssfolder/_mixins.scss";
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.mainFooterDiv {
+  width: 100%;
+  height: 340px;
+  @include important-text;
+  background: #262626;
+
+  .footerTitleImg {
+    margin-top: 25px;
+    .socialIcons {
+      margin-top: 26px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      // .facebookIcon , .youtubeIcon , .twitterIcon{
+      //     margin-left: 30px;
+      // }
+    }
+  }
+
+  .footerTitleDiv {
+    margin-top: 10px;
+    .footerTitle {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 24px;
+      color: white;
+      margin-top: 30px;
+    }
+    .menuUl {
+      margin: 0;
+      padding: 0;
+      .firstMenuLi {
+        margin-top: 30px;
+        @include text-size16px;
+        text-align: $textAlignLeft;
+      }
+      .menuLi {
+        @include text-size16px;
+        margin-top: 16px;
+        text-align: $textAlignLeft;
+      }
+    }
+  }
+
+  .helpUl {
+    margin: 0;
+    padding: 0;
+    .firstHelpLi {
+      margin-top: 30px;
+      @include text-size16px;
+      text-align: $textAlignLeft;
+    }
+    .helpLi {
+      @include text-size16px;
+      margin-top: 16px;
+      text-align: $textAlignLeft;
+    }
+  }
+
+  .locationDiv {
+    display: flex;
+    margin-top: 30px;
+
+    .address {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      color: #2dd06e;
+      margin-left: 10px;
+    }
+  }
+
+  .emailDiv {
+    display: flex;
+    margin-top: 25px;
+
+    .email {
+      @include text-size16px;
+      margin-left: 10px;
+    }
+  }
+  .phoneDiv {
+    display: flex;
+    margin-top: 25px;
+    .phone {
+      @include text-size16px;
+      margin-left: 10px;
+    }
+  }
+}
+
+.footerLine {
+  width: 100%;
+  padding: 34px 0px;
+  color: #e5e5e5;
+  background-color: #262626;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ffffff;
+
+  .protect {
+    margin-left: 130px;
+
+    .protect span {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 20px;
+      color: #e5e5e5;
+      margin-left: 10px;
+    }
+  }
+}
+.rulesAndSecury {
+  margin-right: 150px;
+  .rules {
+    @include text-size16px;
+    margin-right: 60px;
+    .security {
+      @include text-size16px;
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .mainFooterDiv {
+    width: 375px;
+    height: 933px;
+    @include displayFlexAndColumn;
+
+    justify-content: space-evenly;
+    background: #262626;
+
+    .footerTitleImg {
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+    .footerTitleDiv {
+      @include displayFlexAndColumn;
+
+      margin: 0 auto;
+      .footerTitle {
+        margin: 0 auto;
+      }
+      .menuUl {
+        text-align: $textAlignCenter;
+        .firstMenuLi {
+          text-align: $textAlignCenter;
+        }
+        .menuLi {
+          text-align: $textAlignCenter;
+        }
+      }
+    }
+    .footerTitleDiv {
+      @include displayFlexAndColumn;
+      margin: 0 auto;
+      .footerTitle {
+        margin: 0 auto;
+      }
+      .helpUl {
+        text-align: $textAlignCenter;
+        .firstHelpLi {
+          text-align: $textAlignCenter;
+        }
+        .helpLi {
+          text-align: $textAlignCenter;
+        }
+      }
+    }
+  }
+  .footerLine {
+    width: 100%;
+    padding: 34px 0px;
+    color: #e5e5e5;
+    background-color: #262626;
+    display: flex;
+    flex-direction: column-reverse;
+    border: none;
+
+    .protect {
+      margin: 0 auto;
+      margin-top: 30px;
+
+      .protect span {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 20px;
+        color: #e5e5e5;
+        margin-left: 0px;
+      }
+    }
+
+    .rulesAndSecury {
+      margin: 0 auto;
+      .rules {
+        @include text-size16px;
+        margin-right: 60px;
+        .security {
+          @include text-size16px;
+        }
+      }
+    }
+  }
+}

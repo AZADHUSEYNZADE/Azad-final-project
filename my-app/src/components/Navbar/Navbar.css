@@ -1,0 +1,145 @@
+nav {
+  width: 100%;
+  border-bottom: 1px solid var(--main-default);
+}
+
+nav .nav-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .nav-logo .menu-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 7px;
+  margin-right: var(--space-md);
+  margin-left: var(--space-xs);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 20;
+}
+
+nav .nav-logo .menu-icon > div {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 30px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: var(--gray-1);
+}
+
+@media (min-width: 768px) {
+  nav .nav-logo .menu-icon {
+    display: none;
+  }
+}
+
+nav .nav-logo .open {
+  position: relative;
+  width: 30px;
+  gap: 0;
+}
+
+nav .nav-logo .open > div {
+  position: absolute;
+  width: 35px;
+}
+
+nav .nav-logo .open > div:nth-child(1) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+nav .nav-logo .open > div:nth-child(2) {
+  display: none;
+}
+
+nav .nav-logo .open > div:nth-child(3) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+nav .desktop-search {
+  width: 60%;
+  max-width: 591px;
+}
+
+@media (max-width: 768px) {
+  nav .desktop-search {
+    display: none;
+  }
+}
+
+nav .mobile-search {
+  padding: var(--space-xs);
+}
+
+@media (min-width: 768px) {
+  nav .mobile-search {
+    display: none;
+  }
+}
+
+nav .nav-elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: var(--space-sm);
+  padding: var(--component-padding);
+}
+
+nav .container {
+  width: 96%;
+}
+
+nav .container > .row:first-child, nav .container > .nav-links:first-child {
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-xxs);
+}
+
+nav .container .nav-links {
+  max-width: 900px;
+  color: var(--gray-2);
+}
+
+nav .container .nav-links .nav-link {
+  padding-block: var(--space-xs);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+nav .container .nav-links .nav-link:hover {
+  color: var(--main-hover);
+}
+
+nav .container .nav-links .nav-link:active {
+  color: var(--main-pressed);
+}
+
+nav .container .row, nav .container .nav-links {
+  max-height: 50px;
+}
+
+@media (max-width: 768px) {
+  nav .container .row:nth-child(2), nav .container .nav-links:nth-child(2) {
+    display: none;
+  }
+}
+/*# sourceMappingURL=Navbar.css.map */

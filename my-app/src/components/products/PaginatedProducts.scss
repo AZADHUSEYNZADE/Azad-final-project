@@ -1,0 +1,33 @@
+.pagination-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 55px;
+  margin-bottom: 80px;
+  cursor: pointer;
+}
+.next-btn,
+.previous-btn {
+  padding: 5px 8px;
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  border-radius: 60%;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.previous-btn {
+  margin-right: 10px;
+  cursor: pointer;
+}
+.pagination-active {
+  width: 23px;
+  height: 28px;
+  background: #2dd06e;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+}
+.pagination-disabled {
+  margin-left: 10px;
+}

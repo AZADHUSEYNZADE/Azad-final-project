@@ -1,0 +1,141 @@
+@import url("http://fonts.cdnfonts.com/css/euclid-circular-a");
+@import "./styles/mixins";
+@import "./styles/breakpoints";
+@import "./components/Navbar/Navbar.scss";
+
+:root {
+  // ! FONT SIZE
+  --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+  --fs-800: 3.5rem;
+  --fs-700: 1.5rem;
+  --fs-600: 1rem;
+  --fs-500: 1rem;
+  --fs-400: 0.9375rem;
+  --fs-300: 1rem;
+  --fs-200: 0.875rem;
+
+  // ! COLORS
+  --main-default: #2dd06e;
+  --main-hover: #5de285;
+  --main-pressed: #20b269;
+  --main-diabled: #2dd06e;
+
+  --gray-1: #333333;
+  --gray-2: #4f4f4f;
+  --gray-3: #828282;
+  --gray-4: #bdbdbd;
+  --gray-5: #e0e0e0;
+  --gray-6: #f2f2f2;
+
+  --link: #2d9cdb;
+
+  // ! SPACING
+  --space-unit: 1em;
+  --space-xxxs: calc(0.25 * var(--space-unit));
+  --space-xxs: calc(0.375 * var(--space-unit));
+  --space-xs: calc(0.5 * var(--space-unit));
+  --space-sm: calc(0.75 * var(--space-unit));
+  --space-md: calc(1.25 * var(--space-unit));
+  --space-lg: calc(2 * var(--space-unit));
+  --space-xl: calc(3.25 * var(--space-unit));
+  --space-xxl: calc(5.25 * var(--space-unit));
+  --space-xxxl: calc(8.5 * var(--space-unit));
+
+  // ! components padding
+  --component-padding: var(--space-sm);
+}
+
+@media (min-width: 35em) {
+  :root {
+    // ! FONT SIZE
+    --fs-800: 5rem;
+    --fs-700: 2.5rem;
+    --fs-600: 1.5rem;
+    --fs-500: 1.25rem;
+    --fs-400: 1rem;
+  }
+}
+
+@media (min-width: 45em) {
+  :root {
+    // ! FONT SIZE
+    --fs-800: 6.25rem;
+    --fs-700: 3.5rem;
+    --fs-600: 2rem;
+    --fs-500: 1.75rem;
+    --fs-400: 1.125rem;
+  }
+}
+
+// ! BASE STYLING
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: inherit;
+  border: none;
+  outline: none;
+}
+body {
+  font-family: "Euclid Circular A", sans-serif;
+  font-size: var(--fs-300);
+  color: var(--gray-1);
+  background-color: var(--gray-6);
+  line-height: 1.5;
+  // min-height: 100vh;
+  // display: grid;
+  // grid-template-rows: min-content 1fr;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3 {
+  font-weight: 500;
+}
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+button {
+  background-color: inherit;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+// ! GLOBAL CLASSES
+.container {
+  width: 100%;
+  max-width: 1270px;
+  margin: 0 auto;
+  // background-color: red;
+  // padding-block: 1rem;
+  @include sm {
+    width: 90%;
+  }
+}
+.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.active {
+  color: var(--main-default);
+}

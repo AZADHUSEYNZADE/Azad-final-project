@@ -1,0 +1,16 @@
+.btn {
+  font-size: 16px;
+  padding: 1rem 2.6rem;
+  background-color: #2dd06e;
+  color: #fff;
+  border: 1px solid #2dd06e;
+  border-radius: 8px;
+  margin: 0.4rem;
+  width: 100%;
+}
+
+.btn-outline {
+  background-color: #fff;
+  color: #2dd06e;
+}
+/*# sourceMappingURL=Button.css.map */
