@@ -12,7 +12,6 @@ function MobileFilter({ allProducts, setCurrentCategory, currentCategory }) {
 
   return (
     <div className="filterComponent">
-      <div className="lineOfBrand"></div>
       <div className="leftSideCategories">
         <div className="brand">
           <p className="brandCount">Brend (4)</p>
@@ -63,7 +62,7 @@ function MobileFilter({ allProducts, setCurrentCategory, currentCategory }) {
             <div className="lineOfTypes"></div>
             <div className="types">
               <p>Qiymət</p>
-              <img className="incrementCount" src={PlusIcon} alt="plus" />
+              <img className="incrementCount" src={MinusIcon} alt="plus" />
             </div>
             <div className="lineOfTypes"></div>
           </div>

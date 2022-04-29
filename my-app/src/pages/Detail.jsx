@@ -4,7 +4,7 @@ import AboutProduct from "../components/aboutProduct/AboutProduct";
 const Detail = () => {
   return (
     <div>
-      <AboutProduct/>
+      <AboutProduct />
     </div>
   );
 };

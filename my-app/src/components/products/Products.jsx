@@ -4,6 +4,7 @@ import "./Products.scss";
 import RightIcon from "../../assets/Icons/chevron-right.png";
 import MinusIcon from "../../assets/Icons/minus.png";
 import PlusIcon from "../../assets/Icons/plus.png";
+import CancelIcon from "../../assets/Icons/cancel.png";
 import Siralama from "../../assets/Icons/siralama.png";
 import Filter from "../../assets/Icons/filter .png";
 import Commerce from "../../library/commerce/Commerce";
@@ -15,6 +16,7 @@ function Products({ products }) {
   const [currentCategory, setCurrentCategory] = useState(categoryId);
   const [allProducts, setAllProducts] = useState([]);
   const [isVisible, setIsVisible] = useState(false);
+  const [allItems, setAllItems] = useState([]);
 
   React.useEffect(() => {
     const fetchAllProducts = () => {
@@ -28,7 +30,23 @@ function Products({ products }) {
 
     fetchAllProducts();
   }, []);
+  React.useEffect(() => {
+    const fetchAll = () => {
+      Commerce.products
+        .list({
+          category_slug: ["mehsullar"],
+        })
+        .then((response) => setAllItems(response.data));
+    };
 
+    fetchAll();
+  }, []);
+
+  // const fecthProducts = () => {
+  //   Commerce.products.list().then((product) => console.log(products, "dnje"));
+  // };
+  // fecthProducts();
+  // console.log(allProducts);
   return (
     <>
       <div className="container">
@@ -43,6 +61,15 @@ function Products({ products }) {
             <span>Apple</span>
           </li>
         </ul>
+      </div>
+      <div
+        className="cancelDiv"
+        onClick={() => {
+          setIsVisible(false);
+        }}
+      >
+        <img src={CancelIcon} alt="cancelImg" />
+        <span> Filterləmələr</span>
       </div>
       <div className="mobileFilterMainDiv">
         <div className="siralama">
@@ -64,12 +91,13 @@ function Products({ products }) {
 
       {isVisible && (
         <MobileFilter
+          className="mobileFilterOnly"
           allProducts={allProducts}
           setCurrentCategory={setCurrentCategory}
           currentCategory={currentCategory}
         />
       )}
-      <p className="countOfProducts">287 məhsul tapıldı</p>
+      <p className="countOfProducts">{allItems.length - 1} Məhsul tapıldı</p>
 
       <div className="container productsAllDiv">
         <div className="leftSideCategories">
@@ -99,8 +127,8 @@ function Products({ products }) {
                         });
                       }}
                     />
-                    {item.name}
                   </label>
+                  {item.name}
                 </li>
               ))}
             </ul>
@@ -130,7 +158,7 @@ function Products({ products }) {
         </div>
         <div className="imagesOfProduct">
           {products?.map((item, index) => (
-            <Link to={`${item.id}`}>
+            <Link to={`/product-details/${item.id}`}>
               <div className="productCard">
                 <img src={item.image.url} alt="pic" />
                 <p className="itemName">{item.name}</p>
