@@ -19,7 +19,10 @@ function AboutProduct() {
   const { productId } = useParams();
   const [product, setProduct] = useState({});
   const [value, setValue] = useState(0);
-  const [color, setColor] = useState([]);
+  const [color, setColor] = useState("");
+  const [ram, setRam] = useState("");
+
+  console.log(color, "++++++++++++++++++");
 
   const decrementCount = () => {
     setValue(value - 1);
@@ -27,10 +30,14 @@ function AboutProduct() {
   const incrementCount = () => {
     setValue(value + 1);
   };
-  const checkColor = () => {
-    setColor(color);
+  const checkColor = (e) => {
+    let selectedColor = e.target.getAttribute("class");
+    setColor(selectedColor);
   };
 
+  const checkRam = (e) => {
+    setRam(e.target.textContent);
+  };
   React.useEffect(() => {
     const fetchProduct = () => {
       Commerce.products
@@ -87,6 +94,7 @@ function AboutProduct() {
           <h6 className="nameOfProduct">
             {product.name}
             {color}
+            {ram}
           </h6>
           <div className="commentsDiv">
             <img style={{ marginLeft: "0px" }} src={star} alt="starImage" />
@@ -125,7 +133,7 @@ function AboutProduct() {
               {product.variant_groups &&
                 product.variant_groups[1].options.map((item, indexxxx) => (
                   <div key={indexxxx}>
-                    <span>{item.name}</span>
+                    <span onClick={checkRam}>{item.name}</span>
                   </div>
                 ))}
             </div>
@@ -149,12 +157,15 @@ function AboutProduct() {
       </div>
       <p className="titleAdvantagesMobile">Məhsul haqqında</p>
 
-      <p className="advantageTextMobile">{product.description}</p>
+      <p className="advantageTextMobile">
+        {product?.description?.replace(/(<([^>]+)>)/gi, "")}
+      </p>
       <div className="container commentsAndFeatures">
         <p className="techFeat">Texniki Xüsusiyyətləri</p>
         <p className="commentUnderSide">Rəylər</p>
       </div>
       <div className="container line2"></div>
+
       <div className="container mainAndAbout">
         <div className="hiMan">
           <p className="titleFeatures">Əsas göstəricilər</p>
@@ -172,6 +183,9 @@ function AboutProduct() {
               <p>2815</p>
             </div>
           </div>
+        </div>
+        <div className="hiMan">
+          {product?.description?.replace(/(<([^>]+)>)/gi, "")}
         </div>
       </div>
 

@@ -11,12 +11,10 @@ import { Badge } from "@mui/material";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import subPic from "../../assets/Images/subPic.png";
-// import { Products } from "@chec/commerce.js/features/products";
-const Navbar = ({ setShowSidebar }) => {
-  const { categoryId } = useParams();
 
+const Navbar = ({ setShowSidebar }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [allProducts, setAllProducts] = useState([]);
@@ -64,11 +62,15 @@ const Navbar = ({ setShowSidebar }) => {
               <SearchBar />
             </div>
             <div className="nav-elements">
-              <PersonOutlineOutlinedIcon />
+              <Link to="login">
+                <PersonOutlineOutlinedIcon />
+              </Link>
               <FavoriteBorderOutlinedIcon />
-              <Badge badgeContent={4} color="primary">
-                <ShoppingCartOutlinedIcon />
-              </Badge>
+              <Link to="basket">
+                <Badge badgeContent={4} color="primary">
+                  <ShoppingCartOutlinedIcon />
+                </Badge>
+              </Link>
             </div>
           </div>
           <div className="row">

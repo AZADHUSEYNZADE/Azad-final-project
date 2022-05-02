@@ -9,14 +9,16 @@ import Siralama from "../../assets/Icons/siralama.png";
 import Filter from "../../assets/Icons/filter .png";
 import Commerce from "../../library/commerce/Commerce";
 import MobileFilter from "../products/MobileFilter";
+import Cost from "../products/Cost";
 
-function Products({ products }) {
+function Products({ products, count }) {
   const { categoryId } = useParams();
   const navigate = useNavigate();
   const [currentCategory, setCurrentCategory] = useState(categoryId);
   const [allProducts, setAllProducts] = useState([]);
   const [isVisible, setIsVisible] = useState(false);
-  const [allItems, setAllItems] = useState([]);
+  const [filteredItems, setFilteredItems] = useState();
+  const [cost, setCost] = useState(false);
 
   React.useEffect(() => {
     const fetchAllProducts = () => {
@@ -30,23 +32,21 @@ function Products({ products }) {
 
     fetchAllProducts();
   }, []);
+
   React.useEffect(() => {
-    const fetchAll = () => {
-      Commerce.products
-        .list({
-          category_slug: ["mehsullar"],
-        })
-        .then((response) => setAllItems(response.data));
-    };
+    setFilteredItems(products);
+  }, [products]);
 
-    fetchAll();
-  }, []);
+  const findItem = (min, max) => {
+    const filteredProducts = products.filter((item) => {
+      return +item.price.formatted <= max && +item.price.formatted >= min;
+    });
 
-  // const fecthProducts = () => {
-  //   Commerce.products.list().then((product) => console.log(products, "dnje"));
-  // };
-  // fecthProducts();
-  // console.log(allProducts);
+    setFilteredItems(filteredProducts);
+  };
+
+  console.log(filteredItems);
+
   return (
     <>
       <div className="container">
@@ -97,7 +97,7 @@ function Products({ products }) {
           currentCategory={currentCategory}
         />
       )}
-      <p className="countOfProducts">{allItems.length - 1} Məhsul tapıldı</p>
+      <p className="countOfProducts">{count} Məhsul tapıldı</p>
 
       <div className="container productsAllDiv">
         <div className="leftSideCategories">
@@ -132,40 +132,36 @@ function Products({ products }) {
                 </li>
               ))}
             </ul>
+
             <div className="mainTypeDiv">
               <div className="types">
-                <p>Type</p>
-                <img className="incrementCount" src={PlusIcon} alt="plus" />
-              </div>
-              <div className="lineOfTypes"></div>
-              <div className="types">
-                <p>Category</p>
-                <img className="incrementCount" src={PlusIcon} alt="plus" />
-              </div>
-              <div className="lineOfTypes"></div>
-              <div className="types">
-                <p>Rəng</p>
-                <img className="incrementCount" src={PlusIcon} alt="plus" />
-              </div>
-              <div className="lineOfTypes"></div>
-              <div className="types">
                 <p>Qiymət</p>
-                <img className="incrementCount" src={PlusIcon} alt="plus" />
+
+                <img
+                  onClick={() => {
+                    setCost(!cost);
+                  }}
+                  className="incrementCount"
+                  src={cost ? MinusIcon : PlusIcon}
+                  alt="plus"
+                />
               </div>
               <div className="lineOfTypes"></div>
             </div>
           </div>
+          {cost && <Cost findItem={findItem} />}
         </div>
         <div className="imagesOfProduct">
-          {products?.map((item, index) => (
-            <Link to={`/product-details/${item.id}`}>
-              <div className="productCard">
-                <img src={item.image.url} alt="pic" />
-                <p className="itemName">{item.name}</p>
-                <p className="itemPrice">{item.price.formatted} $</p>
-              </div>
-            </Link>
-          ))}
+          {filteredItems &&
+            filteredItems.map((item, index) => (
+              <Link to={`/product-details/${item.id}`}>
+                <div className="productCard">
+                  <img src={item.image.url} alt="pic" />
+                  <p className="itemName">{item.name}</p>
+                  <p className="itemPrice">{item.price.formatted} $</p>
+                </div>
+              </Link>
+            ))}
         </div>
       </div>
     </>

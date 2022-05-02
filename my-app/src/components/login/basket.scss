@@ -1,0 +1,261 @@
+.mainBasketDiv {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 130px;
+  .leftSideBasket {
+    width: 25%;
+    height: 330px;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    h6 {
+      font-size: 20px;
+      line-height: 30px;
+      color: #4f4f4f;
+      font-weight: 500;
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+  }
+  .myShoppingCart {
+    margin-left: 20px;
+    margin-top: 20px;
+    position: relative;
+    .shopIcon {
+      position: absolute;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+    span {
+      position: absolute;
+      margin-left: 40px;
+      margin-top: 5px;
+      font-size: 16px;
+      line-height: 24px;
+      cursor: pointer;
+    }
+  }
+  .myShoppingCart:hover {
+    color: red;
+  }
+  .myFavoriteCart:hover {
+    color: red;
+  }
+  .myPersonCart:hover {
+    color: red;
+  }
+  .myLocationCart:hover {
+    color: red;
+  }
+  .myLogOutCart:hover {
+    color: red;
+  }
+  .myFavoriteCart {
+    margin-left: 20px;
+    margin-top: 70px;
+    position: relative;
+    .favoriteIcon {
+      position: absolute;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+    span {
+      position: absolute;
+      margin-left: 40px;
+      margin-top: 5px;
+      font-size: 16px;
+      line-height: 24px;
+      cursor: pointer;
+    }
+  }
+  .myPersonCart {
+    margin-left: 20px;
+    margin-top: 120px;
+    position: relative;
+    .personIcon {
+      position: absolute;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+    span {
+      position: absolute;
+      margin-left: 40px;
+      margin-top: 5px;
+      font-size: 16px;
+      line-height: 24px;
+      cursor: pointer;
+    }
+  }
+  .myLocationCart {
+    margin-left: 20px;
+    margin-top: 170px;
+    position: relative;
+    .personIcon {
+      position: absolute;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+    span {
+      position: absolute;
+      margin-left: 40px;
+      margin-top: 5px;
+      font-size: 16px;
+      line-height: 24px;
+      cursor: pointer;
+    }
+  }
+  .myLogOutCart {
+    margin-left: 20px;
+    margin-top: 220px;
+    position: relative;
+    .logOutIcon {
+      position: absolute;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+    span {
+      position: absolute;
+      margin-left: 40px;
+      margin-top: 5px;
+      font-size: 16px;
+      line-height: 24px;
+      cursor: pointer;
+    }
+  }
+  .rightSideBasket {
+    width: 70%;
+    h6 {
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 500;
+      color: #4f4f4f;
+    }
+    .mainAddedProduct {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .addedProductBox {
+      width: 48%;
+      height: 328px;
+      border-radius: 8px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      margin-top: 20px;
+      display: flex;
+    }
+  }
+  .addedProductImg {
+    margin-top: 60px;
+    margin-left: 20px;
+  }
+  .orderedDateTitle {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #828282;
+    margin-top: 60px;
+  }
+  .orderedDate {
+    font-size: 15px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #4f4f4f;
+    margin-top: 10px;
+  }
+  .orderedStatusTitle {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #828282;
+    margin-top: 20px;
+  }
+  .orderedStatus {
+    font-size: 15px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #4f4f4f;
+    margin-top: 10px;
+  }
+  .totatTitle {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #828282;
+    margin-top: 20px;
+  }
+  .total {
+    font-size: 15px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #db2c66;
+    margin-top: 10px;
+  }
+  .detailsOfOrder {
+    width: 170px;
+    height: 40px;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    color: #4f4f4f;
+    margin-top: 25px;
+    cursor: pointer;
+  }
+  .myProfil {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mainBasketDiv {
+    margin-bottom: 80px;
+  }
+  .leftSideBasket {
+    display: none;
+  }
+
+  .mainBasketDiv .rightSideBasket {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    position: relative;
+    .myProfil {
+      display: block;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      cursor: pointer;
+      color: #4f4f4f;
+    }
+    h6 {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      color: #4f4f4f;
+    }
+  }
+  .mainBasketDiv .rightSideBasket .addedProductBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+
+    .mainAddedProduct {
+      display: flex;
+      flex-direction: column;
+    }
+    .orderedDateTitle {
+      margin-top: 70px;
+    }
+    .detailsOfOrder {
+      position: absolute;
+      right: 70px;
+    }
+  }
+}

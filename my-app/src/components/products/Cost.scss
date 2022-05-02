@@ -1,0 +1,32 @@
+.costInputDiv {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 25px;
+}
+input {
+  border: 2px solid #e0e0e0;
+  width: 110px;
+  border-radius: 8px;
+  height: 40px;
+  margin-top: 10px;
+  text-align: center;
+  color: #828282;
+  font-size: 14px;
+}
+.inputLine {
+  width: 24px;
+  height: 2px;
+  background-color: #e0e0e0;
+  margin-top: 30px;
+}
+.filterCostButton {
+  width: 200px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #2dd06e;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 55px;
+  margin-top: 15px;
+  color: #ffffff;
+}

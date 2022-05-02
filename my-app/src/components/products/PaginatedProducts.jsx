@@ -8,6 +8,7 @@ import "./PaginatedProducts.scss";
 const PaginatedProducts = ({ productsPerPage }) => {
   const { categoryId } = useParams();
   const [products, setProducts] = useState([]);
+  const [allProductsCount, setAllProductsCount] = useState(0);
 
   React.useEffect(() => {
     const fetchProducts = () => {
@@ -15,6 +16,7 @@ const PaginatedProducts = ({ productsPerPage }) => {
         .list({ category_slug: [categoryId] })
         .then((products) => {
           setProducts(products.data);
+          setAllProductsCount(products.data.length);
         })
         .catch((error) => {
           console.log("There was an error fetching the products", error);
@@ -46,7 +48,9 @@ const PaginatedProducts = ({ productsPerPage }) => {
 
   return (
     <>
-      <Products products={currentItems} />
+      {currentItems && allProductsCount && (
+        <Products products={currentItems} count={allProductsCount} />
+      )}
       <ReactPaginate
         breakLabel="..."
         nextLabel=">"

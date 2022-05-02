@@ -1,5 +1,7 @@
 import React from "react";
 import "./footer.scss";
+import { Link } from "react-router-dom";
+
 import FooterIcon from "../../assets/Icons/footerIcon.svg";
 import instagramIcon from "../../assets/Icons/instagramIcon.svg";
 import facebookIcon from "../../assets/Icons/facebookIcon.svg";
@@ -8,8 +10,8 @@ import youtubeIcon from "../../assets/Icons/youtubeIcon.svg";
 import locationIcon from "../../assets/Icons/locationIcon.svg";
 import emailIcon from "../../assets/Icons/emailIcon.svg";
 import phoneIcon from "../../assets/Icons/phoneIcon.svg";
-import  '../../myscssfolder/_variables.scss'
-import  '../../myscssfolder/_mixins.scss'
+import "../../myscssfolder/_variables.scss";
+import "../../myscssfolder/_mixins.scss";
 function Footer() {
   return (
     <>
@@ -38,7 +40,9 @@ function Footer() {
           <h6 className="footerTitle">Kömək</h6>
           <div>
             <ul className="helpUl">
-              <li className="firstHelpLi">Tez-tez soruşulan suallar</li>
+              <Link to="questions">
+                <li className="firstHelpLi">Tez-tez soruşulan suallar</li>
+              </Link>
               <li className="helpLi">Çatdırılma xidməti</li>
               <li className="helpLi">Geri qaytarılma şərtləri</li>
             </ul>
