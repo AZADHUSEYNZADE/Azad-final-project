@@ -6,6 +6,7 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import AddLocationIcon from "@mui/icons-material/AddLocation";
 import LogoutIcon from "@mui/icons-material/Logout";
 import BasketImg from "../../assets/Images/basketImg.png";
+import { Link } from "react-router-dom";
 function Basket() {
   return (
     <div className="container mainBasketDiv">
@@ -49,7 +50,9 @@ function Basket() {
               <p className="orderedStatus">Yoldadır</p>
               <p className="totatTitle">Ümumi məbləğ:</p>
               <p className="total">240 $</p>
-              <button className="detailsOfOrder">Sifarişin detalları</button>
+              <Link to="/basket-detail">
+                <button className="detailsOfOrder">Sifarişin detalları</button>
+              </Link>
             </div>
           </div>
           <div className="addedProductBox">

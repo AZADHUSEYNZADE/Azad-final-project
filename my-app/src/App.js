@@ -9,6 +9,7 @@ import Questions from "./components/footer/Questions";
 import Login from "./components/login/Login";
 import SignUp from "./components/login/SignUp";
 import Basket from "./components/login/Basket";
+import BasketDetail from "./components/login/BasketDetail";
 import { Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -28,7 +29,9 @@ const App = () => {
         <Route path="/questions" element={<Questions />} />
         <Route path="/login" element={<Login />} />
         <Route path="/sign-up" element={<SignUp />} />
-        <Route path="/basket" element={<Basket />} />
+        <Route path="basket" element={<Basket />} />
+        <Route path="/login-again" element={<Login />} />
+        <Route path="/basket-detail" element={<BasketDetail />} />
       </Routes>
 
       <Footer />

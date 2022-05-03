@@ -1,5 +1,287 @@
-.mainSignUpDiv {
+.mainLoginDiv {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.leftSideLogin {
+  width: 50%;
+  h6 {
+    text-align: center;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    color: #4f4f4f;
+  }
+}
+.SocialIconsDiv {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+.fbSide {
+  display: flex;
+  margin-right: 70px;
+  span {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    color: #4f4f4f;
+    margin-top: 3px;
+    margin-left: 5px;
+  }
+}
+.fbIcon {
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.googleSide {
+  display: flex;
+  span {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    color: #4f4f4f;
+    margin-top: 3px;
+    margin-left: 5px;
+  }
+}
+.googleIcon {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 40px;
+  cursor: pointer;
+  img {
+    width: 12px;
+    height: 13px;
+    margin-left: 4px;
+    margin-top: 3px;
+  }
+}
+.orLogin {
+  text-align: center;
+  color: #bdbdbd;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.nameLoginDiv {
+  display: flex;
+  justify-content: center;
+  p {
+    color: #bdbdbd;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #4f4f4f;
+  }
+  input {
+    width: 312px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: #f2f2f2;
+  }
+}
+.numberLoginDiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  p {
+    color: #bdbdbd;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #4f4f4f;
+  }
+  .selectAndInput {
+    width: 312px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: #f2f2f2;
+    margin-top: 10px;
+    border: 2px solid #e0e0e0;
+  }
+  select {
+    background-color: #f2f2f2;
+    margin-left: 20px;
+  }
+  input {
+    border: none;
+    height: 30px;
+    background-color: #f2f2f2;
+  }
+}
+.emailLoginDiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  p {
+    color: #bdbdbd;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #4f4f4f;
+  }
+  input {
+    width: 312px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: #f2f2f2;
+  }
+}
+.passwordLoginDiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #4f4f4f;
+  }
+  input {
+    width: 312px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: #f2f2f2;
+  }
+  h6 {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+    color: #2d9cdb;
+    text-align: right;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  button {
+    width: 312px;
+    height: 48px;
+    background-color: #2dd06e;
+    border-radius: 8px;
+    margin-top: 40px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.rightSideLogin {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  position: relative;
+  .LoginPic1 {
+    width: 384px;
+    height: 261px;
+  }
+  .LoginPic2 {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: -10;
+    left: 250px;
+    bottom: 450px;
+  }
+}
+
+.noAccountDivSign {
+  display: flex;
+  justify-content: center;
+  margin-left: 400px;
+  position: relative;
+  .noacc1 {
+    position: absolute;
+    bottom: 415px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #4f4f4f;
+  }
+  .noacc2 {
+    font-weight: 400;
+    color: #2d9cdb;
+    cursor: pointer;
+  }
+}
+.mobileVersionLogin {
+  display: none;
+}
+
+.userAgree {
   width: 300px;
-  height: 300px;
-  border: 2px solid black;
+  height: 20px;
+  display: flex;
+  margin-top: 20px;
+  input {
+    width: 20px;
+    height: 20px;
+    margin-top: 0px;
+  }
+  span {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #2d9cdb;
+    margin-left: 10px;
+    margin-top: 2px;
+  }
+  .secondAgreeSpan {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #4f4f4f;
+    margin-left: 5px;
+    margin-top: 2px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .mainLoginDiv {
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 0px;
+  }
+  .leftSideLogin {
+    width: 100%;
+  }
+  .rightSideLogin {
+    display: none;
+  }
+  .noAccountDiv {
+    display: none;
+  }
+  .mobileVersionLogin {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    margin-bottom: 90px;
+  }
+  .noacc1Mobile {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #4f4f4f;
+  }
+  .noacc2Mobile {
+    font-weight: 400;
+    color: #2d9cdb;
+    cursor: pointer;
+  }
+  .userAgree {
+    display: none;
+  }
+  .noacc1 {
+    display: none;
+  }
 }

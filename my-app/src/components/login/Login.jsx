@@ -44,7 +44,7 @@ function Login() {
           </div>
         </div>
 
-        <div className="rightSideLogin">
+        <div className="rightSideLogin1">
           <img className="LoginPic1" src={LoginPic1} alt="bgPic1" />
           <img className="LoginPic2" src={LoginPic2} alt="bgPic2" />
         </div>
@@ -60,7 +60,9 @@ function Login() {
       <div className="mobileVersionLogin">
         <span className="noacc1Mobile">
           Hesabınız yoxdur?
-          <span className="noacc2Mobile">Qeydiyyatdan keçin</span>
+          <Link to="/sign-up">
+            <span className="noacc2Mobile">Qeydiyyatdan keçin</span>
+          </Link>
         </span>
       </div>
     </>
