@@ -65,7 +65,10 @@ const Navbar = ({ setShowSidebar }) => {
               <Link to="login">
                 <PersonOutlineOutlinedIcon />
               </Link>
-              <FavoriteBorderOutlinedIcon />
+              <Link to="my-orders">
+                <FavoriteBorderOutlinedIcon />
+              </Link>
+
               <Link to="basket">
                 <Badge badgeContent={4} color="primary">
                   <ShoppingCartOutlinedIcon />

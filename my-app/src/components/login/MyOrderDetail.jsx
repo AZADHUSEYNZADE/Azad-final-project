@@ -4,7 +4,7 @@ import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlin
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import AddLocationIcon from "@mui/icons-material/AddLocation";
 import LogoutIcon from "@mui/icons-material/Logout";
-import "./basket-detail.scss";
+import "./my-order-detail.scss";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import BasketImg from "../../assets/Images/basketImg.png";
 import LocalAtmIcon from "@mui/icons-material/LocalAtm";
@@ -37,6 +37,8 @@ function BasketDetail() {
         </div>
       </div>
       <div className="rightSideBasket2">
+        <h5 className="myProfil2">Profilim</h5>
+
         <div className="arrowDiv">
           <ArrowBackIcon className="arrowIcon" />
           <h5 className="myProfil">Sifarişin detalları</h5>
@@ -74,7 +76,9 @@ function BasketDetail() {
           <div className="detailLine"></div>
           <div className="detailsecondPart">
             <div>
-              <h5>Şəxsi məlumatlar</h5>
+              <h5 className="remake">
+                Şəxsi məlumatlar <span>Düzəliş et</span>
+              </h5>
               <ul>
                 <li className="firstLi">Gunel</li>
                 <li>Mammadova</li>
@@ -83,7 +87,7 @@ function BasketDetail() {
               </ul>
             </div>
             <div>
-              <h5>Çatdırılma ünvanı</h5>
+              <h5 className="takeAway">Çatdırılma ünvanı</h5>
               <ul>
                 <li className="firstLi">Bakı şəhəri</li>
                 <li>Nərimanov rayonu</li>
@@ -97,7 +101,7 @@ function BasketDetail() {
           </div>
           <div className="detailLine"></div>
           <div className="detailThirdPart">
-            <div>
+            <div className="leftThirdPart">
               <h5>Ödəmə detalları</h5>
               <ul>
                 <li className="firstLi">Ödəmə metodu</li>

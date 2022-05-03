@@ -1,0 +1,517 @@
+.mainBasketDiv2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 130px;
+  .leftSideBasket {
+    width: 25%;
+    height: 330px;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    h6 {
+      font-size: 20px;
+      line-height: 30px;
+      color: #4f4f4f;
+      font-weight: 500;
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+  }
+  .myShoppingCart {
+    margin-left: 20px;
+    margin-top: 20px;
+    position: relative;
+    .shopIcon {
+      position: absolute;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+    span {
+      position: absolute;
+      margin-left: 40px;
+      margin-top: 5px;
+      font-size: 16px;
+      line-height: 24px;
+      cursor: pointer;
+    }
+  }
+  .myShoppingCart:hover {
+    color: red;
+  }
+  .myFavoriteCart:hover {
+    color: red;
+  }
+  .myPersonCart:hover {
+    color: red;
+  }
+  .myLocationCart:hover {
+    color: red;
+  }
+  .myLogOutCart:hover {
+    color: red;
+  }
+  .myFavoriteCart {
+    margin-left: 20px;
+    margin-top: 70px;
+    position: relative;
+    .favoriteIcon {
+      position: absolute;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+    span {
+      position: absolute;
+      margin-left: 40px;
+      margin-top: 5px;
+      font-size: 16px;
+      line-height: 24px;
+      cursor: pointer;
+    }
+  }
+  .myPersonCart {
+    margin-left: 20px;
+    margin-top: 120px;
+    position: relative;
+    .personIcon {
+      position: absolute;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+    span {
+      position: absolute;
+      margin-left: 40px;
+      margin-top: 5px;
+      font-size: 16px;
+      line-height: 24px;
+      cursor: pointer;
+    }
+  }
+  .myLocationCart {
+    margin-left: 20px;
+    margin-top: 170px;
+    position: relative;
+    .personIcon {
+      position: absolute;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+    span {
+      position: absolute;
+      margin-left: 40px;
+      margin-top: 5px;
+      font-size: 16px;
+      line-height: 24px;
+      cursor: pointer;
+    }
+  }
+  .myLogOutCart {
+    margin-left: 20px;
+    margin-top: 220px;
+    position: relative;
+    .logOutIcon {
+      position: absolute;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+    span {
+      position: absolute;
+      margin-left: 40px;
+      margin-top: 5px;
+      font-size: 16px;
+      line-height: 24px;
+      cursor: pointer;
+    }
+  }
+
+  .rightSideBasket2 {
+    width: 70%;
+
+    .myProfil2 {
+      display: none;
+    }
+    .arrowDiv {
+      display: flex;
+      cursor: pointer;
+      .arrowIcon {
+        margin-top: 3px;
+      }
+      h5 {
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 500;
+        color: #4f4f4f;
+        margin-left: 5px;
+        margin-bottom: 30px;
+      }
+    }
+    .rightSideBasketBottom {
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      border-radius: 8px;
+
+      .detailLine {
+        height: 1px;
+        background-color: #bdbdbd;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        width: 95%;
+        margin-left: 20px;
+      }
+
+      .detailFirstPart {
+        display: flex;
+        .leftSide {
+          width: 30%;
+          margin-top: 40px;
+          margin-left: 30px;
+        }
+        .rightSide {
+          width: 70%;
+
+          h5 {
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 500;
+            color: #4f4f4f;
+            margin-top: 60px;
+          }
+          .firstUlDetail {
+            display: flex;
+            margin-top: 25px;
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 400;
+            color: #828282;
+            .secondLiDetail {
+              margin-left: 70px;
+            }
+            .thirdLiDetail {
+              margin-left: 70px;
+            }
+          }
+          .secondUlDetail {
+            display: flex;
+            margin-top: 5px;
+            font-size: 14px;
+            line-height: 16px;
+            font-weight: 400;
+            color: #333333;
+            .secondLiDetail2 {
+              margin-left: 75px;
+            }
+            .thirdLiDetail2 {
+              margin-left: 70px;
+            }
+          }
+          .thirdUlDetail {
+            display: flex;
+            margin-top: 30px;
+            font-size: 14px;
+            line-height: 16px;
+            font-weight: 400;
+            color: #828282;
+            .secondLiDetail3 {
+              margin-left: 30px;
+            }
+          }
+          .fourthUlDetail {
+            display: flex;
+            margin-top: 5px;
+            font-size: 14px;
+            line-height: 16px;
+            font-weight: 400;
+            color: #333333;
+            .secondLiDetail4 {
+              margin-left: 37px;
+            }
+          }
+        }
+      }
+      .secondUlDetail {
+        display: flex;
+        margin-top: 5px;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 400;
+        color: #333333;
+        .secondLiDetail2 {
+          margin-left: 75px;
+        }
+        .thirdLiDetail2 {
+          margin-left: 70px;
+        }
+      }
+      .thirdUlDetail {
+        display: flex;
+        margin-top: 30px;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 400;
+        color: #828282;
+        .secondLiDetail3 {
+          margin-left: 30px;
+        }
+      }
+      .fourthUlDetail {
+        display: flex;
+        margin-top: 5px;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 400;
+        color: #333333;
+        .secondLiDetail4 {
+          margin-left: 37px;
+        }
+      }
+      .detailsecondPart {
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 20px;
+
+        h5 {
+          font-size: 16px;
+          line-height: 20px;
+          font-weight: 600;
+          color: #1d2123;
+        }
+        .remake span {
+          display: none;
+        }
+        ul {
+          font-size: 14px;
+          line-height: 16px;
+          font-weight: 400;
+          color: #1d2123;
+          li {
+            font-size: 14px;
+            line-height: 16px;
+            font-weight: 400;
+            color: #1d2123;
+            padding-top: 10px;
+          }
+          .firstLi {
+            margin-top: 20px;
+          }
+        }
+        .lastTitle {
+          font-size: 16px;
+          line-height: 20px;
+          font-weight: 600;
+          color: #3366ff;
+          cursor: pointer;
+        }
+      }
+      .detailThirdPart {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 60px;
+        h5 {
+          font-size: 16px;
+          line-height: 20px;
+          font-weight: 600;
+          color: #1d2123;
+        }
+        ul {
+          font-size: 14px;
+          line-height: 16px;
+          font-weight: 400;
+          color: #1d2123;
+          li {
+            font-size: 14px;
+            line-height: 16px;
+            font-weight: 400;
+            color: #828282;
+            padding-top: 10px;
+          }
+          .firstLi {
+            display: flex;
+            margin-top: 20px;
+            position: relative;
+          }
+
+          .secondLi {
+            margin-top: 40px;
+            margin-right: 30px;
+            position: relative;
+            .icon {
+              position: absolute;
+              top: 5px;
+            }
+            span {
+              margin-left: 30px;
+              color: #1d2123;
+              font-size: 14px;
+              line-height: 16px;
+              font-weight: 400;
+            }
+          }
+          .last {
+            color: #1d2123;
+            font-size: 14px;
+            line-height: 16px;
+            font-weight: 600;
+            margin-top: 0px;
+          }
+        }
+      }
+      .lastDetailDiv {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 60px 30px 60px;
+        p {
+          color: #1d2123;
+          font-size: 16px;
+          line-height: 20px;
+          font-weight: 600;
+        }
+        h6 {
+          color: #db2c66;
+          font-size: 20px;
+          line-height: 24px;
+          font-weight: 600;
+          margin-right: 60px;
+        }
+      }
+      .howMainButton {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+      }
+      .howProductButton {
+        width: 215px;
+        height: 48px;
+        border: 1px solid #2dd06e;
+        color: #2dd06e;
+        font-size: 14px;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mainBasketDiv2 {
+    margin-bottom: 80px;
+    width: 95%;
+    .leftSideBasket {
+      display: none;
+    }
+
+    .rightSideBasket2 {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      .myProfil2 {
+        display: block;
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 600;
+        color: #4f4f4f;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+      .arrowDiv {
+        display: flex;
+        cursor: pointer;
+        .arrowIcon {
+          margin-top: 3px;
+        }
+        h5 {
+          font-size: 20px;
+          line-height: 28px;
+          font-weight: 500;
+          color: #4f4f4f;
+          margin-left: 5px;
+          margin-bottom: 30px;
+        }
+      }
+
+      .rightSideBasketBottom {
+        .detailLine {
+          margin-left: 10px;
+        }
+      }
+
+      .detailFirstPart {
+        display: flex;
+        flex-direction: column;
+        .leftSide {
+          width: 100%;
+          margin-top: 40px;
+          display: flex;
+          justify-content: center;
+        }
+        .rightSide {
+          width: 100%;
+          h5 {
+            text-align: center;
+            margin-top: 10px;
+          }
+          .firstUlDetail {
+            display: flex;
+            justify-content: left;
+
+            margin-left: 20px;
+            .secondLiDetail {
+              margin-left: 70px;
+            }
+            .thirdLiDetail {
+              margin-left: 70px;
+            }
+          }
+          .secondUlDetail {
+            display: flex;
+            justify-content: left;
+            margin-left: 20px;
+
+            .secondLiDetail2 {
+              margin-left: 75px;
+            }
+            .thirdLiDetail2 {
+              margin-left: 70px;
+            }
+          }
+          .thirdUlDetail {
+            display: flex;
+            justify-content: left;
+            margin-left: 20px;
+
+            .secondLiDetail3 {
+              margin-left: 30px;
+            }
+          }
+          .fourthUlDetail {
+            display: flex;
+            justify-content: left;
+            margin-left: 20px;
+
+            .secondLiDetail4 {
+              margin-left: 37px;
+            }
+          }
+        }
+      }
+      .detailsecondPart {
+        flex-direction: column;
+        margin-left: 20px;
+        .takeAway {
+          margin-top: 30px;
+        }
+        .remake span {
+          display: inline-block;
+          margin-left: 60px;
+          color: #3366ff;
+          cursor: pointer;
+        }
+        .lastTitle {
+          display: none;
+        }
+      }
+      .detailThirdPart {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
