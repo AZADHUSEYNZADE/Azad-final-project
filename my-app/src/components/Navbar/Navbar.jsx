@@ -13,8 +13,11 @@ import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlin
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import { Link } from "react-router-dom";
 import subPic from "../../assets/Images/subPic.png";
+import { selectCart } from "../../features/cartSlice";
+import { useSelector } from "react-redux";
 
 const Navbar = ({ setShowSidebar }) => {
+  const cart = useSelector(selectCart);
   const [isOpen, setIsOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [allProducts, setAllProducts] = useState([]);
@@ -70,7 +73,13 @@ const Navbar = ({ setShowSidebar }) => {
               </Link>
 
               <Link to="basket">
-                <Badge badgeContent={4} color="primary">
+                <Badge
+                  badgeContent={cart.reduce(
+                    (prevValue, cartItem) => cartItem.count + prevValue,
+                    0
+                  )}
+                  color="primary"
+                >
                   <ShoppingCartOutlinedIcon />
                 </Badge>
               </Link>

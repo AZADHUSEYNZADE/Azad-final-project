@@ -41,7 +41,7 @@
     .nameAndFeatures {
       display: flex;
       flex-direction: column;
-      margin-top: 10px;
+
       p {
         font-size: 14px;
         line-height: 20px;
@@ -75,7 +75,6 @@
       }
     }
     .buttons {
-      margin-top: 30px;
       margin-left: 30px;
       button {
         font-size: 20px;
@@ -87,7 +86,6 @@
       }
     }
     .deleteIcon {
-      margin-top: 30px;
       margin-left: 80px;
       color: #db2c66;
       cursor: pointer;

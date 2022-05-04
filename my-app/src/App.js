@@ -12,32 +12,36 @@ import MyOrders from "./components/login/MyOrders";
 import MyOrderDetail from "./components/login/MyOrderDetail";
 import Basket from "./components/login/Basket";
 import { Routes, Route } from "react-router-dom";
+import { store } from "./store";
+import { Provider } from "react-redux";
 
 const App = () => {
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <Navbar />
+    <Provider store={store}>
+      <React.Fragment>
+        <CssBaseline />
+        <Navbar />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
+        <Routes>
+          <Route path="/" element={<Home />} />
 
-        <Route
-          path="/products/:categoryId"
-          element={<PaginatedProducts productsPerPage={9} />}
-        />
-        <Route path="/product-details/:productId" element={<Detail />} />
-        <Route path="/questions" element={<Questions />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/sign-up" element={<SignUp />} />
-        <Route path="my-orders" element={<MyOrders />} />
-        <Route path="/login-again" element={<Login />} />
-        <Route path="/my-orders-detail" element={<MyOrderDetail />} />
-        <Route path="/basket" element={<Basket />} />
-      </Routes>
+          <Route
+            path="/products/:categoryId"
+            element={<PaginatedProducts productsPerPage={9} />}
+          />
+          <Route path="/product-details/:productId" element={<Detail />} />
+          <Route path="/questions" element={<Questions />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="my-orders" element={<MyOrders />} />
+          <Route path="/login-again" element={<Login />} />
+          <Route path="/my-orders-detail" element={<MyOrderDetail />} />
+          <Route path="/basket" element={<Basket />} />
+        </Routes>
 
-      <Footer />
-    </React.Fragment>
+        <Footer />
+      </React.Fragment>
+    </Provider>
   );
 };
 

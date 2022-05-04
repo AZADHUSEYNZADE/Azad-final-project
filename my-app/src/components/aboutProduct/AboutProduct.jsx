@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "./AboutProduct.scss";
 import Commerce from "../../library/commerce/Commerce";
 import { useParams } from "react-router-dom";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { useSelector, useDispatch } from "react-redux";
+import { selectCart, addToCart } from "../../features/cartSlice";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
@@ -18,17 +18,23 @@ function AboutProduct() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const { productId } = useParams();
   const [product, setProduct] = useState({});
-  const [value, setValue] = useState(0);
+  const [count, setCount] = useState(1);
   const [color, setColor] = useState("");
   const [ram, setRam] = useState("");
 
-  console.log(color, "++++++++++++++++++");
+  const dispatch = useDispatch();
 
   const decrementCount = () => {
-    setValue(value - 1);
+    if (count === 1) {
+      return;
+    }
+    setCount((prevState) => prevState - 1);
   };
   const incrementCount = () => {
-    setValue(value + 1);
+    setCount((prevState) => prevState + 1);
+  };
+  const dicrementCount = () => {
+    setCount((prevState) => prevState - 1);
   };
   const checkColor = (e) => {
     let selectedColor = e.target.getAttribute("class");
@@ -50,7 +56,6 @@ function AboutProduct() {
         });
     };
     fetchProduct();
-    console.log(product, "maujh");
   }, [productId]);
 
   return (
@@ -145,13 +150,16 @@ function AboutProduct() {
             <button onClick={decrementCount} className="dicrement">
               -
             </button>
-            <p className="count">{value}</p>
+            <p className="count">{count}</p>
             <button onClick={incrementCount} className="increment">
               +
             </button>
           </div>
           <div className="addDiv">
-            <img src={shop} alt="shop" /> <button>Səbətə at</button>
+            <img src={shop} alt="shop" />
+            <button onClick={() => dispatch(addToCart({ product, count }))}>
+              Səbətə at
+            </button>
           </div>
         </div>
       </div>
