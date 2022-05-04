@@ -90,7 +90,7 @@ function AboutProduct() {
           >
             {product?.assets?.map((item) => (
               <SwiperSlide>
-                <img src={item.url} alt="pic" />
+                <img className="buttomImage" src={item.url} alt="pic" />
               </SwiperSlide>
             ))}
           </Swiper>

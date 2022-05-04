@@ -12,8 +12,18 @@
     height: 388px;
     display: flex;
     margin: 0 auto;
+    object-fit: scale-down;
   }
 
+  .mySwiper {
+    .buttomImage {
+      float: left;
+      width: 200px;
+      height: 200px;
+      object-fit: scale-down;
+      text-align: center;
+    }
+  }
   .mobileButton {
     display: none;
   }
