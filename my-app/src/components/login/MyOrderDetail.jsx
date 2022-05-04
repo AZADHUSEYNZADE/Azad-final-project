@@ -77,7 +77,7 @@ function BasketDetail() {
           <div className="detailsecondPart">
             <div>
               <h5 className="remake">
-                Şəxsi məlumatlar <span>Düzəliş et</span>
+                Şəxsi məlumatlar <span className="hii">Düzəliş et</span>
               </h5>
               <ul>
                 <li className="firstLi">Gunel</li>

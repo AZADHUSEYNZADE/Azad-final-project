@@ -204,9 +204,14 @@
 
 @media screen and (max-width: 600px) {
   .mainBasketDiv {
+    .leftSideBasket {
+      display: none;
+    }
     .rightSideBasket {
-      width: 100%;
-      margin-left: 30px;
+      width: 90%;
+      margin-right: 30px;
+      // margin-left: 30px;
+
       .mobileProf {
         display: block;
         font-size: 20px;
@@ -224,6 +229,7 @@
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
+        position: relative;
         .addedProductBox {
           display: flex;
           box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -234,6 +240,10 @@
         .addedProductImg {
           padding: 60px 20px 60px 0px;
         }
+      }
+      .detailsOfOrder {
+        position: absolute;
+        left: 100px;
       }
     }
   }

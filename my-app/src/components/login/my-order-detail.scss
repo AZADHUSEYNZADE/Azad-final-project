@@ -164,6 +164,11 @@
           width: 30%;
           margin-top: 40px;
           margin-left: 30px;
+          img {
+            max-width: 176px;
+            display: flex;
+            margin: 0 auto;
+          }
         }
         .rightSide {
           width: 70%;
@@ -433,84 +438,106 @@
         }
       }
 
-      .detailFirstPart {
-        display: flex;
-        flex-direction: column;
-        .leftSide {
+      .rightSideBasketBottom {
+        .detailThirdPart {
+          padding: 0px;
+          .leftThirdPart {
+            margin-left: 20px;
+          }
+        }
+      }
+      .rightSideBasketBottom {
+        .lastDetailDiv {
+          padding: 0px 20px 30px 20px;
+          h6 {
+            margin-right: 0px;
+          }
+        }
+
+        .detailFirstPart {
           width: 100%;
-          margin-top: 40px;
+          margin: 0px;
+          padding: 0px;
           display: flex;
+          flex-direction: column;
           justify-content: center;
-        }
-        .rightSide {
-          width: 100%;
-          h5 {
-            text-align: center;
-            margin-top: 10px;
+          .leftSide {
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            margin-top: 40px;
+            img {
+              width: 100%;
+            }
           }
-          .firstUlDetail {
-            display: flex;
-            justify-content: left;
+          .rightSide {
+            width: 100%;
+            h5 {
+              text-align: center;
+              margin: 0px;
+              padding: 0px;
+              margin-top: 10px;
+            }
+            .firstUlDetail {
+              display: flex;
+              justify-content: left;
 
-            margin-left: 20px;
-            .secondLiDetail {
-              margin-left: 70px;
+              margin-left: 20px;
+              .secondLiDetail {
+                margin-left: 70px;
+              }
+              .thirdLiDetail {
+                margin-left: 70px;
+              }
             }
-            .thirdLiDetail {
-              margin-left: 70px;
-            }
-          }
-          .secondUlDetail {
-            display: flex;
-            justify-content: left;
-            margin-left: 20px;
+            .secondUlDetail {
+              display: flex;
+              justify-content: left;
+              margin-left: 20px;
 
-            .secondLiDetail2 {
-              margin-left: 75px;
+              .secondLiDetail2 {
+                margin-left: 75px;
+              }
+              .thirdLiDetail2 {
+                margin-left: 70px;
+              }
             }
-            .thirdLiDetail2 {
-              margin-left: 70px;
-            }
-          }
-          .thirdUlDetail {
-            display: flex;
-            justify-content: left;
-            margin-left: 20px;
+            .thirdUlDetail {
+              display: flex;
+              justify-content: left;
+              margin-left: 20px;
 
-            .secondLiDetail3 {
-              margin-left: 30px;
+              .secondLiDetail3 {
+                margin-left: 30px;
+              }
             }
-          }
-          .fourthUlDetail {
-            display: flex;
-            justify-content: left;
-            margin-left: 20px;
+            .fourthUlDetail {
+              display: flex;
+              justify-content: left;
+              margin-left: 20px;
 
-            .secondLiDetail4 {
-              margin-left: 37px;
+              .secondLiDetail4 {
+                margin-left: 37px;
+              }
             }
           }
         }
-      }
-      .detailsecondPart {
-        flex-direction: column;
-        margin-left: 20px;
-        .takeAway {
-          margin-top: 30px;
+        .detailsecondPart {
+          flex-direction: column;
+          margin-left: 20px;
+          .takeAway {
+            margin-top: 30px;
+          }
+          .remake {
+            display: inline-block;
+            margin-left: 60px;
+            color: #3366ff;
+            cursor: pointer;
+          }
+          .lastTitle {
+            display: none;
+          }
         }
-        .remake span {
-          display: inline-block;
-          margin-left: 60px;
-          color: #3366ff;
-          cursor: pointer;
-        }
-        .lastTitle {
-          display: none;
-        }
-      }
-      .detailThirdPart {
-        display: flex;
-        justify-content: space-between;
       }
     }
   }
