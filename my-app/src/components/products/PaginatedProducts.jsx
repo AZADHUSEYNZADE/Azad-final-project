@@ -4,12 +4,13 @@ import Commerce from "../../library/commerce/Commerce";
 import { useParams } from "react-router-dom";
 import Products from "./Products";
 import "./PaginatedProducts.scss";
-
+import Backdrop from "@mui/material/Backdrop";
+import CircularProgress from "@mui/material/CircularProgress";
 const PaginatedProducts = ({ productsPerPage }) => {
   const { categoryId } = useParams();
   const [products, setProducts] = useState([]);
   const [allProductsCount, setAllProductsCount] = useState(0);
-
+  const [open, setOpen] = React.useState(true);
   React.useEffect(() => {
     const fetchProducts = () => {
       Commerce.products
@@ -17,6 +18,7 @@ const PaginatedProducts = ({ productsPerPage }) => {
         .then((products) => {
           setProducts(products.data);
           setAllProductsCount(products.data.length);
+          setOpen(false);
         })
         .catch((error) => {
           console.log("There was an error fetching the products", error);
@@ -48,6 +50,13 @@ const PaginatedProducts = ({ productsPerPage }) => {
 
   return (
     <>
+      <Backdrop
+        sx={{ color: "#000", opacity: "1", zIndex: "1", background: "white" }}
+        open={open}
+      >
+        <CircularProgress color="inherit" />
+      </Backdrop>
+
       {currentItems && allProductsCount && (
         <Products products={currentItems} count={allProductsCount} />
       )}

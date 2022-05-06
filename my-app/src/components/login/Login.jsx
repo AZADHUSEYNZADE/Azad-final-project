@@ -38,7 +38,9 @@ function Login() {
             <div>
               <p>Şifrə</p>
               <input type="password" placeholder="add your password" />
-              <h6>Şifrəni unutmusunuz?</h6>
+              <Link to="/forgetted-password">
+                <h6>Şifrəni unutmusunuz?</h6>
+              </Link>
               <button>Daxil ol</button>
             </div>
           </div>

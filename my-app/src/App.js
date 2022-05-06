@@ -11,6 +11,10 @@ import SignUp from "./components/login/SignUp";
 import MyOrders from "./components/login/MyOrders";
 import MyOrderDetail from "./components/login/MyOrderDetail";
 import Basket from "./components/login/Basket";
+import ForgettedPassword from "./components/login/ForgettedPassword";
+import CheckEmail from "./components/login/CheckEmail.jsx";
+import NewPassword from "./components/login/NewPassword";
+
 import { Routes, Route } from "react-router-dom";
 import { store } from "./store";
 import { Provider } from "react-redux";
@@ -37,6 +41,9 @@ const App = () => {
           <Route path="/login-again" element={<Login />} />
           <Route path="/my-orders-detail" element={<MyOrderDetail />} />
           <Route path="/basket" element={<Basket />} />
+          <Route path="/forgetted-password" element={<ForgettedPassword />} />
+          <Route path="/check-email" element={<CheckEmail />} />
+          <Route path="/new-password" element={<NewPassword />} />
         </Routes>
 
         <Footer />

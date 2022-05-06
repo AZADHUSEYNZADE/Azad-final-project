@@ -1,0 +1,41 @@
+.mainCheckDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 87px;
+  margin-bottom: 150px;
+  img {
+    width: 232px;
+    height: 208px;
+    display: flex;
+    margin: 0 auto;
+  }
+  h5 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 32px;
+    color: #4f4f4f;
+    font-weight: 600;
+    padding-top: 40px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .mainCheckDiv {
+    margin: 160px 0px;
+
+    img {
+      width: 134px;
+      height: 120px;
+      display: flex;
+      margin: 0 auto;
+    }
+    h5 {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 24px;
+      color: #4f4f4f;
+      font-weight: 600;
+      padding-top: 30px;
+    }
+  }
+}

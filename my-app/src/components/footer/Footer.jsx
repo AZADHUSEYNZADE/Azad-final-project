@@ -76,7 +76,7 @@ function Footer() {
       </div>
       <div className="footerLine">
         <div className="protect">
-          © <span>PeojectX 2021. Bütün hüquqlar qorunur.</span>
+          © <span>ProjectX 2021. Bütün hüquqlar qorunur.</span>
         </div>
         <div className="rulesAndSecury">
           <span className="rules">Qaydalar və şərtlər</span>

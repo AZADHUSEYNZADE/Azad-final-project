@@ -11,6 +11,7 @@ import Commerce from "../../library/commerce/Commerce";
 import MobileFilter from "../products/MobileFilter";
 import Cost from "../products/Cost";
 
+import ClipLoader from "react-spinners/ClipLoader";
 function Products({ products, count }) {
   const { categoryId } = useParams();
   const navigate = useNavigate();
@@ -37,6 +38,7 @@ function Products({ products, count }) {
     setFilteredItems(products);
   }, [products]);
 
+  console.log(products);
   const findItem = (min, max) => {
     const filteredProducts = products.filter((item) => {
       return +item.price.formatted <= max && +item.price.formatted >= min;
@@ -45,123 +47,135 @@ function Products({ products, count }) {
     setFilteredItems(filteredProducts);
   };
 
-  console.log(filteredItems);
-
   return (
     <>
-      <div className="container">
-        <ul className="mainGoHomeUl">
-          <li>
-            <span>Ana səhifə</span> <img src={RightIcon} alt="rightSide" />
-          </li>
-          <li>
-            <span>Telefonlar</span> <img src={RightIcon} alt="rightSide" />
-          </li>
-          <li>
-            <span>Apple</span>
-          </li>
-        </ul>
-      </div>
-      <div
-        className="cancelDiv"
-        onClick={() => {
-          setIsVisible(false);
-        }}
-      >
-        <img src={CancelIcon} alt="cancelImg" />
-        <span> Filterləmələr</span>
-      </div>
-      <div className="mobileFilterMainDiv">
-        <div className="siralama">
-          <img src={Siralama} alt="siralama" />
-          <span>Sıralama</span>
+      <div>
+        <div className="container">
+          <ul className="mainGoHomeUl">
+            <li>
+              <span>Ana səhifə</span> <img src={RightIcon} alt="rightSide" />
+            </li>
+            <li>
+              <span>Telefonlar</span> <img src={RightIcon} alt="rightSide" />
+            </li>
+            <li>
+              <span>Apple</span>
+            </li>
+          </ul>
         </div>
-        <div className="mobileFilterLine"></div>
+
         <div
+          className="cancelDiv"
           onClick={() => {
-            setIsVisible(true);
+            setIsVisible(false);
           }}
-          className="filter"
         >
-          <img src={Filter} alt="filter" />
-          <span>Filterləmələr</span>
+          <img src={CancelIcon} alt="cancelImg" />
+          <span> Filterləmələr</span>
         </div>
-      </div>
-      <div className="mobileFilterLine2"></div>
 
-      {isVisible && (
-        <MobileFilter
-          className="mobileFilterOnly"
-          allProducts={allProducts}
-          setCurrentCategory={setCurrentCategory}
-          currentCategory={currentCategory}
-        />
-      )}
-      <p className="countOfProducts">{count} Məhsul tapıldı</p>
-
-      <div className="container productsAllDiv">
-        <div className="leftSideCategories">
-          <div className="brand">
-            <p className="brandCount">Brend (4)</p>
-            <img className="decrementCount" src={MinusIcon} alt="minus" />
+        <div className="mobileFilterMainDiv">
+          <div className="siralama">
+            <img src={Siralama} alt="siralama" />
+            <span>Sıralama</span>
           </div>
-          <div className="lineOfBrand"></div>
-          <div className="allNameCategory">
-            <ul>
-              {allProducts.map((item) => (
-                <li>
-                  <label
-                    htmlFor={`category-${item.name}`}
-                    style={{ display: "flex", alignItems: "center" }}
-                  >
-                    <input
-                      className="checkedInput"
-                      type="checkbox"
-                      id={`category-${item.name}`}
-                      checked={currentCategory === item.name.toLowerCase()}
-                      style={{ marginRight: "8px" }}
-                      onInput={() => {
-                        setCurrentCategory(item.name.toLowerCase());
-                        navigate(`/products/${item.name.toLowerCase()}`, {
-                          replace: true,
-                        });
-                      }}
-                    />
-                  </label>
-                  {item.name}
-                </li>
-              ))}
-            </ul>
+          <div className="mobileFilterLine"></div>
+          <div
+            onClick={() => {
+              setIsVisible(true);
+            }}
+            className="filter"
+          >
+            <img src={Filter} alt="filter" />
+            <span>Filterləmələr</span>
+          </div>
+        </div>
+        <div className="mobileFilterLine2"></div>
 
-            <div className="mainTypeDiv">
-              <div className="types">
-                <p>Qiymət</p>
+        {isVisible && (
+          <MobileFilter
+            className="mobileFilterOnly"
+            allProducts={allProducts}
+            setCurrentCategory={setCurrentCategory}
+            currentCategory={currentCategory}
+          />
+        )}
 
-                <img
-                  onClick={() => {
-                    setCost(!cost);
-                  }}
-                  className="incrementCount"
-                  src={cost ? MinusIcon : PlusIcon}
-                  alt="plus"
-                />
-              </div>
-              <div className="lineOfTypes"></div>
+        {count && <p className="countOfProducts">{count} Məhsul tapıldı</p>}
+        <div className="container productsAllDiv">
+          <div className="leftSideCategories">
+            <div className="brand">
+              <p className="brandCount">
+                Brend <span>({allProducts.length})</span>{" "}
+              </p>
+              <img className="decrementCount" src={MinusIcon} alt="minus" />
             </div>
-          </div>
-          {cost && <Cost findItem={findItem} />}
-        </div>
-        <div className="imagesOfProduct">
-          {filteredItems &&
-            filteredItems.map((item, index) => (
-              <Link to={`/product-details/${item.id}`}>
-                <div className="productCard">
-                  <img src={item.image.url} alt="pic" />
-                  <p className="itemName">{item.name}</p>
-                  <p className="itemPrice">{item.price.formatted} $</p>
+            <div className="lineOfBrand"></div>
+            <div className="allNameCategory">
+              <ul>
+                {allProducts.map((item) => (
+                  <li>
+                    <label
+                      htmlFor={`category-${item.name}`}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        position: "relative",
+                      }}
+                    >
+                      <input
+                        className="checkedInput"
+                        type="checkbox"
+                        id={`category-${item.name}`}
+                        checked={currentCategory === item.name.toLowerCase()}
+                        style={{
+                          position: "absolute",
+                          right: "10px",
+                          bottom: "3px",
+                        }}
+                        onInput={() => {
+                          setCurrentCategory(item.name.toLowerCase());
+                          navigate(`/products/${item.name.toLowerCase()}`, {
+                            replace: true,
+                          });
+                        }}
+                      />
+                    </label>
+                    {item.name}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mainTypeDiv">
+                <div className="types">
+                  <p>Qiymət</p>
+
+                  <img
+                    onClick={() => {
+                      setCost(!cost);
+                    }}
+                    className="incrementCount"
+                    src={cost ? MinusIcon : PlusIcon}
+                    alt="plus"
+                  />
                 </div>
-              </Link>
-            ))}
+                <div className="lineOfTypes"></div>
+              </div>
+            </div>
+            {cost && <Cost findItem={findItem} />}
+          </div>
+          <div className="imagesOfProduct">
+            {filteredItems &&
+              filteredItems.map((item, index) => (
+                <Link to={`/product-details/${item.id}`}>
+                  <div className="productCard">
+                    <img src={item.image.url} alt="pic" />
+                    <p className="itemName">{item.name}</p>
+                    <p className="itemPrice">{item.price.formatted} $</p>
+                  </div>
+                </Link>
+              ))}
+          </div>
         </div>
       </div>
     </>

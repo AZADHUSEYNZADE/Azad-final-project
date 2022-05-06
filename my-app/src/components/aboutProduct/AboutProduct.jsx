@@ -3,8 +3,8 @@ import "./AboutProduct.scss";
 import Commerce from "../../library/commerce/Commerce";
 import { useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useSelector, useDispatch } from "react-redux";
-import { selectCart, addToCart } from "../../features/cartSlice";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../features/cartSlice";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
@@ -13,6 +13,8 @@ import { FreeMode, Navigation, Thumbs } from "swiper";
 import star from "../../assets/Icons/star.png";
 import whiteStar from "../../assets/Icons/whiteStar.png";
 import shop from "../../assets/Icons/shop.png";
+import Backdrop from "@mui/material/Backdrop";
+import CircularProgress from "@mui/material/CircularProgress";
 
 function AboutProduct() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -21,6 +23,7 @@ function AboutProduct() {
   const [count, setCount] = useState(1);
   const [color, setColor] = useState("");
   const [ram, setRam] = useState("");
+  const [open, setOpen] = React.useState(true);
 
   const dispatch = useDispatch();
 
@@ -50,6 +53,7 @@ function AboutProduct() {
         .retrieve(productId)
         .then((product) => {
           setProduct(product);
+          setOpen(false);
         })
         .catch((error) => {
           console.log("There was an error fetching the products", error);
@@ -60,6 +64,12 @@ function AboutProduct() {
 
   return (
     <>
+      <Backdrop
+        sx={{ color: "#000", opacity: "0.3", zIndex: "1", background: "white" }}
+        open={open}
+      >
+        <CircularProgress color="inherit" />
+      </Backdrop>
       <div className="container mainAboutDiv">
         <div className="swiperAboutPro">
           <Swiper
@@ -98,8 +108,8 @@ function AboutProduct() {
         <div className="rightSideAbout">
           <h6 className="nameOfProduct">
             {product.name}
-            {color}
-            {ram}
+            <span> {color.toUpperCase()}</span>
+            <span> {ram}</span>
           </h6>
           <div className="commentsDiv">
             <img style={{ marginLeft: "0px" }} src={star} alt="starImage" />
@@ -120,7 +130,7 @@ function AboutProduct() {
           </div>
 
           <div className="colorsDiv">
-            <p>{product.variant_groups && product.variant_groups[0].name} :</p>
+            <p>{product.variant_groups && product.variant_groups[0].name}:</p>
             <div>
               {product.variant_groups &&
                 product.variant_groups[0].options.map((item, indexxx) => (

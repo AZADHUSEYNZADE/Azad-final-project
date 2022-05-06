@@ -81,7 +81,10 @@
     flex-direction: row;
     margin-top: 25px;
     p {
-      margin-top: 5px;
+      margin-top: 7px;
+      font-size: 14px;
+      line-height: 20px;
+      color: #4f4f4f;
     }
     div {
       display: flex;
@@ -98,7 +101,10 @@
     flex-direction: row;
     margin-top: 20px;
     p {
-      margin-top: 5px;
+      margin-top: 7px;
+      font-size: 14px;
+      line-height: 20px;
+      color: #4f4f4f;
     }
     div {
       display: flex;
@@ -178,6 +184,7 @@
       font-weight: 500;
       color: #ffffff;
       margin-left: 15px;
+      cursor: pointer;
     }
   }
 }
@@ -185,12 +192,21 @@
   display: flex;
   flex-direction: row;
   margin-top: 120px;
+  margin-bottom: 20px;
 }
 .techFeat {
   margin-left: 30px;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #4f4f4f;
 }
 .commentUnderSide {
   margin-left: 200px;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #bdbdbd;
 }
 .line2 {
   height: 1px;
@@ -340,10 +356,11 @@
     .nameOfProduct {
       font-size: 16px;
       line-height: 24px;
-      font-weight: 500;
+      font-weight: 600;
       color: #333333;
-
       margin-left: 15px;
+      margin-top: 80px;
+      text-align: center;
     }
     .longName {
       display: none;
@@ -416,7 +433,7 @@
       margin-left: 5px;
     }
     .costs {
-      margin-top: 25px;
+      margin-top: 0px;
     }
     .colorsDiv {
       display: flex;
@@ -488,6 +505,7 @@
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
+    margin-top: 15px;
   }
   .leftSideFeaturesMobile {
     display: flex;
