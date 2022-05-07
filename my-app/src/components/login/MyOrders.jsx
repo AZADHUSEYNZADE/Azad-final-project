@@ -20,8 +20,10 @@ function Basket() {
           <span>Favorilərim</span>
         </div>
         <div className="myPersonCart">
-          <PersonOutlineOutlinedIcon className="personIcon" />
-          <span>Şəxsi məlumatlar</span>
+          <Link to="/user-information">
+            <PersonOutlineOutlinedIcon className="personIcon" />
+            <span>Şəxsi məlumatlar</span>
+          </Link>
         </div>
         <div className="myLocationCart">
           <AddLocationIcon className="personIcon" />

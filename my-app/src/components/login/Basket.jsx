@@ -16,16 +16,13 @@ function Basket() {
 
   const dispatch = useDispatch();
 
-  // const totalBalance = useMemo(
-  //   () =>
-  //     cart.reduce((prev, item) => {
-  //       return prev + item.price.raw;
-  //     }, 0),
-  //   [cart]
-  // );
+  const total = cart.reduce((prev, { product }) => {
+    return prev + product.price.raw;
+  }, 0);
 
-  // console.log(totalBalance, "totallllllllllllllllllllllllllll");
-  // console.log(cart, "cartssssssssss");
+  const sum = 5 + 15 - 10;
+  const sum2 = total + sum;
+
   return (
     <div className="container">
       <h6 className="countOfProductBasket">Səbət ({cart.length} məhsul)</h6>
@@ -65,7 +62,7 @@ function Basket() {
                   </button>
                 </div>
                 <DeleteIcon
-                  className="deleteIconMobile"
+                  className="deleteIcon"
                   onClick={() => {
                     dispatch(deleteItem({ productId: product.id }));
                   }}
@@ -80,11 +77,11 @@ function Basket() {
           <ul>
             <li>
               <span>Məbləğ </span>
-              <span>65.00$</span>
+              <span>{total}</span>
             </li>
             <li>
               <span>Çatdırılma </span>
-              <span>0.00 $</span>
+              <span>15.00 $</span>
             </li>
             <li>
               <span>Hədiyyə paketi </span>
@@ -97,7 +94,7 @@ function Basket() {
             <div className="totalLine"></div>
             <li className="totalLiDiv">
               <span className="totalName">Cəmi </span>
-              <span className="total">65.50 $</span>
+              <span className="total">{sum2}</span>
             </li>
           </ul>
         </div>
@@ -106,12 +103,7 @@ function Basket() {
         <div className="firstPart">
           <input type="checkbox" />
           <img src={BasketImg} alt="img" />
-          {/* <DeleteIcon
-            className="deleteIconMobile"
-            onClick={() => {
-              Commerce.cart.remove("item_7RyWOwmK5nEa2V");
-            }} */}
-          {/* /> */}
+          <DeleteIcon className="deleteIconMobile" />
         </div>
         <h6>
           iPhone 12, 64 GB, Bənövşəyi, (MJNM3) Golden 5 G 8690604083886 0212042

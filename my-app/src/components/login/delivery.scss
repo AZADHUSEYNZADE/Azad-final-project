@@ -1,0 +1,194 @@
+.deliveryMainDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 56px;
+  margin-bottom: 120px;
+  .deliveryLeftSide {
+    width: 70%;
+    h5 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #1d2123;
+      line-height: 28px;
+      padding-bottom: 20px;
+    }
+    .infoLine {
+      height: 1px;
+      background-color: #828282;
+      margin: 25px 0px;
+    }
+    .deliveryInformation {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 25px;
+      h6 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #1d2123;
+        line-height: 28px;
+      }
+      ul {
+        margin-top: 20px;
+        li {
+          font-size: 14px;
+          font-weight: 400;
+          color: #1d2123;
+          line-height: 20px;
+          padding-top: 5px;
+        }
+      }
+      .checkIcon {
+        color: #2dd06e;
+        cursor: pointer;
+      }
+      .remakeSpan {
+        font-size: 14px;
+        font-weight: 400;
+        color: #2d9cdb;
+        line-height: 20px;
+        padding-right: 10px;
+        margin-top: 2px;
+        cursor: pointer;
+      }
+      .checkIconMobile {
+        display: none;
+      }
+      .checkIconMobileTop {
+        display: none;
+      }
+      input {
+        width: 380px;
+        height: 48px;
+        background-color: #f2f2f2;
+      }
+    }
+    .saveButtonDelivery {
+      width: 176px;
+      border: none;
+      height: 48px;
+      background-color: #2dd06e;
+      color: white;
+      font-size: 14px;
+      border-radius: 8px;
+      margin-top: 35px;
+      cursor: pointer;
+    }
+  }
+  .deliveryRıghtSide {
+    width: 25%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 310px;
+    border-radius: 8px;
+    margin-left: 50px;
+    margin-top: 30px;
+    h6 {
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 600;
+      color: #1d2123;
+      margin-left: 25px;
+      margin-top: 20px;
+    }
+    ul {
+      position: relative;
+      li {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 30px;
+        span {
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 400;
+          color: #1d2123;
+        }
+      }
+      .totalLiDiv {
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        .totalName {
+          font-weight: bold;
+        }
+        .total {
+          color: #db2c66;
+          font-weight: bold;
+          margin: 0px;
+          padding: 0px;
+        }
+      }
+      .totalLine {
+        height: 1px;
+        background-color: #828282;
+        width: 80%;
+        margin-left: 30px;
+      }
+    }
+  }
+  .courierInput {
+    width: 100%;
+    height: 80px;
+    background-color: #f2f2f2;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .deliveryMainDiv {
+    flex-direction: column;
+    width: 90%;
+    justify-content: center;
+    .deliveryLeftSide {
+      width: 90%;
+      margin: 0 auto;
+      h5 {
+        padding-bottom: 0px;
+      }
+      .deliveryInformation {
+        flex-direction: column;
+        p {
+          margin-top: 20px;
+        }
+        .checkIcon {
+          display: none;
+        }
+        .remakeSpan {
+          display: none;
+        }
+        .checkIconMobile {
+          display: block;
+          position: absolute;
+          bottom: 5px;
+          color: #2dd06e;
+        }
+        .checkIconMobileTop {
+          display: block;
+          position: absolute;
+          bottom: 100px;
+          color: #2dd06e;
+          right: 15px;
+          span {
+            color: #2d9cdb;
+            padding-right: 10px;
+          }
+          .checkTop {
+            position: absolute;
+          }
+        }
+        input {
+          width: 312px;
+        }
+      }
+      .saveButtonDelivery {
+        width: 312px;
+      }
+      .courierInput {
+        width: 312px;
+      }
+    }
+    .deliveryRıghtSide {
+      width: 90%;
+      margin-left: 20px;
+    }
+  }
+}

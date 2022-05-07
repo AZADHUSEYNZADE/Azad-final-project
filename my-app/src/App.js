@@ -14,6 +14,8 @@ import Basket from "./components/login/Basket";
 import ForgettedPassword from "./components/login/ForgettedPassword";
 import CheckEmail from "./components/login/CheckEmail.jsx";
 import NewPassword from "./components/login/NewPassword";
+import UserInformation from "./components/login/UserInformation";
+import Delivery from "./components/login/Delivery";
 
 import { Routes, Route } from "react-router-dom";
 import { store } from "./store";
@@ -44,6 +46,8 @@ const App = () => {
           <Route path="/forgetted-password" element={<ForgettedPassword />} />
           <Route path="/check-email" element={<CheckEmail />} />
           <Route path="/new-password" element={<NewPassword />} />
+          <Route path="/user-information" element={<UserInformation />} />
+          <Route path="/delivery" element={<Delivery />} />
         </Routes>
 
         <Footer />

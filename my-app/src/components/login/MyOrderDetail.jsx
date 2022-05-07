@@ -8,6 +8,7 @@ import "./my-order-detail.scss";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import BasketImg from "../../assets/Images/basketImg.png";
 import LocalAtmIcon from "@mui/icons-material/LocalAtm";
+import { Link } from "react-router-dom";
 function BasketDetail() {
   return (
     <div className="container mainBasketDiv2">
@@ -22,9 +23,12 @@ function BasketDetail() {
           <span>Favorilərim</span>
         </div>
         <div className="myPersonCart">
-          <PersonOutlineOutlinedIcon className="personIcon" />
-          <span>Şəxsi məlumatlar</span>
+          <Link to="/user-information">
+            <PersonOutlineOutlinedIcon className="personIcon" />
+            <span>Şəxsi məlumatlar</span>
+          </Link>
         </div>
+
         <div className="myLocationCart">
           <AddLocationIcon className="personIcon" />
 
