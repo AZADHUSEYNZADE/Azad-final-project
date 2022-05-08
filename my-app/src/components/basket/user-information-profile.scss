@@ -1,0 +1,266 @@
+.mainUserProfileDiv {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 300px;
+  .leftSideProfileDiv {
+    width: 25%;
+    height: 330px;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-top: 30px;
+
+    h6 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #1d2123;
+      line-height: 28px;
+      margin-left: 20px;
+      padding-top: 20px;
+    }
+    .myShoppingCart {
+      margin-left: 20px;
+      margin-top: 20px;
+      position: relative;
+      .shopIcon {
+        position: absolute;
+        margin-top: 5px;
+        cursor: pointer;
+      }
+      span {
+        position: absolute;
+        margin-left: 40px;
+        margin-top: 5px;
+        font-size: 16px;
+        line-height: 24px;
+        cursor: pointer;
+      }
+    }
+    .myShoppingCart:hover {
+      color: red;
+    }
+    .myFavoriteCart:hover {
+      color: red;
+    }
+    .myPersonCart:hover {
+      color: red;
+    }
+    .myLocationCart:hover {
+      color: red;
+    }
+    .myLogOutCart:hover {
+      color: red;
+    }
+    .myFavoriteCart {
+      margin-left: 20px;
+      margin-top: 70px;
+      position: relative;
+      .favoriteIcon {
+        position: absolute;
+        margin-top: 5px;
+        cursor: pointer;
+      }
+      span {
+        position: absolute;
+        margin-left: 40px;
+        margin-top: 5px;
+        font-size: 16px;
+        line-height: 24px;
+        cursor: pointer;
+      }
+    }
+    .myPersonCart {
+      margin-left: 20px;
+      margin-top: 120px;
+      position: relative;
+      .personIcon {
+        position: absolute;
+        margin-top: 5px;
+        cursor: pointer;
+      }
+      span {
+        position: absolute;
+        margin-left: 40px;
+        margin-top: 5px;
+        font-size: 16px;
+        line-height: 24px;
+        cursor: pointer;
+      }
+    }
+    .myLocationCart {
+      margin-left: 20px;
+      margin-top: 170px;
+      position: relative;
+      .personIcon {
+        position: absolute;
+        margin-top: 5px;
+        cursor: pointer;
+      }
+      span {
+        position: absolute;
+        margin-left: 40px;
+        margin-top: 5px;
+        font-size: 16px;
+        line-height: 24px;
+        cursor: pointer;
+      }
+    }
+    .myLogOutCart {
+      margin-left: 20px;
+      margin-top: 220px;
+      position: relative;
+      .logOutIcon {
+        position: absolute;
+        margin-top: 5px;
+        cursor: pointer;
+      }
+      span {
+        position: absolute;
+        margin-left: 40px;
+        margin-top: 5px;
+        font-size: 16px;
+        line-height: 24px;
+        cursor: pointer;
+      }
+    }
+  }
+  .rightSideProfileDiv {
+    margin-top: 40px;
+    margin-left: 50px;
+    .myAccMobile {
+      display: none;
+    }
+    h6 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #4f4f4f;
+      line-height: 28px;
+      margin-bottom: 20px;
+    }
+    .rightSideProfileBottom {
+      border-radius: 8px;
+      box-shadow: #64646f33 0px 7px 29px 0px;
+      padding-bottom: 30px;
+      .profInformation {
+        display: flex;
+        flex-direction: row;
+        padding: 0px 30px;
+        p {
+          font-size: 14px;
+          font-weight: 400;
+          color: #4f4f4f;
+          line-height: 20px;
+          padding-top: 30px;
+        }
+        input {
+          width: 312px;
+          height: 48px;
+          background-color: #f2f2f2;
+          border-radius: 8px;
+        }
+        .address {
+          margin-left: 30px;
+        }
+      }
+      .fillInformationProf {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        .numberLoginDiv {
+          margin-top: 5px;
+          margin-left: 30px;
+        }
+        .emailParagraph {
+          margin-left: 35px;
+        }
+        .emailInp {
+          width: 312px;
+          height: 48px;
+          background-color: #f2f2f2;
+          border-radius: 8px;
+        }
+      }
+      .dateDiv {
+        margin-left: 30px;
+        p {
+          font-size: 14px;
+          font-weight: 400;
+          color: #4f4f4f;
+          line-height: 20px;
+          padding-top: 30px;
+        }
+        input {
+          width: 312px;
+          height: 48px;
+          background-color: #f2f2f2;
+          border-radius: 8px;
+        }
+      }
+      .editButton {
+        display: flex;
+        margin: 0 auto;
+        flex-direction: row;
+        justify-content: center;
+        width: 312px;
+        height: 48px;
+        background-color: #2dd06e;
+        border-radius: 8px;
+        font-size: 14px;
+        color: #f2f2f2;
+        font-weight: 500;
+        margin-top: 30px;
+        cursor: pointer;
+        .editIcon {
+          font-size: 20px;
+          margin-top: 12px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .mainUserProfileDiv {
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 100px;
+    h6 {
+      margin-left: 30px;
+    }
+    .leftSideProfileDiv {
+      display: none;
+    }
+    .rightSideProfileDiv {
+      margin-left: 0px;
+      width: 100%;
+      .myAccMobile {
+        display: block;
+        margin-left: 30px;
+        font-size: 20px;
+        font-weight: 400;
+        color: #4f4f4f;
+        line-height: 28px;
+        margin-bottom: 10px;
+      }
+      .rightSideProfileBottom {
+        flex-direction: column;
+        .profInformation {
+          flex-direction: column;
+          .address {
+            margin-left: 0px;
+          }
+        }
+        .fillInformationProf {
+          flex-direction: column;
+
+          .numberLoginDiv {
+            margin-left: 0px;
+          }
+          .emailParagraph {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -8,14 +8,16 @@ import Footer from "./components/footer/Footer";
 import Questions from "./components/footer/Questions";
 import Login from "./components/login/Login";
 import SignUp from "./components/login/SignUp";
-import MyOrders from "./components/login/MyOrders";
-import MyOrderDetail from "./components/login/MyOrderDetail";
-import Basket from "./components/login/Basket";
+import MyOrders from "./components/basket/MyOrders";
+import MyOrderDetail from "./components/basket/MyOrderDetail";
+import Basket from "./components/basket/Basket";
 import ForgettedPassword from "./components/login/ForgettedPassword";
 import CheckEmail from "./components/login/CheckEmail.jsx";
 import NewPassword from "./components/login/NewPassword";
-import UserInformation from "./components/login/UserInformation";
-import Delivery from "./components/login/Delivery";
+import UserInformationPayment from "./components/basket/UserInformation-payment";
+import Delivery from "./components/basket/Delivery";
+import PaymentMethod from "./components/basket/PaymentMethod";
+import UserInformationProfile from "./components/basket/UserInformationProfile";
 
 import { Routes, Route } from "react-router-dom";
 import { store } from "./store";
@@ -46,8 +48,16 @@ const App = () => {
           <Route path="/forgetted-password" element={<ForgettedPassword />} />
           <Route path="/check-email" element={<CheckEmail />} />
           <Route path="/new-password" element={<NewPassword />} />
-          <Route path="/user-information" element={<UserInformation />} />
+          <Route
+            path="/user-information"
+            element={<UserInformationPayment />}
+          />
           <Route path="/delivery" element={<Delivery />} />
+          <Route path="/payment-method" element={<PaymentMethod />} />
+          <Route
+            path="/user-information-profile"
+            element={<UserInformationProfile />}
+          />
         </Routes>
 
         <Footer />

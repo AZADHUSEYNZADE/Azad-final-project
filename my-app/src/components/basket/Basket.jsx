@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React from "react";
 import "./basket.scss";
 import BasketImg from "../../assets/Images/basketImg.png";
 import DeleteIcon from "@mui/icons-material/Delete";

@@ -1,5 +1,5 @@
 import React from "react";
-import "./user-information.scss";
+import "./user-information-payment.scss";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import { Link } from "react-router-dom";
 function UserInformation() {
@@ -90,7 +90,7 @@ function UserInformation() {
           </div>
         </div>
       </div>
-      <div className="userInfoRıghtSide">
+      <div className="userInfoRightSide">
         <h6>Ümumi</h6>
         <ul>
           <li>

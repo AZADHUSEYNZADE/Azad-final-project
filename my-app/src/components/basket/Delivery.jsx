@@ -1,7 +1,7 @@
 import React from "react";
 import "./delivery.scss";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
-
+import { Link } from "react-router-dom";
 function Delivery() {
   return (
     <div className="container deliveryMainDiv">
@@ -67,8 +67,9 @@ function Delivery() {
             placeholder="Mətni daxil edin..."
           />
         </div>
-
-        <button className="saveButtonDelivery">Yadda saxla </button>
+        <Link to="/payment-method">
+          <button className="saveButtonDelivery">Yadda saxla </button>
+        </Link>
 
         <div className="infoLine"></div>
         <div className="deliveryInformation">
@@ -87,7 +88,7 @@ function Delivery() {
           </div>
         </div>
       </div>
-      <div className="deliveryRıghtSide">
+      <div className="deliveryRightSide">
         <h6>Ümumi</h6>
         <ul>
           <li>
