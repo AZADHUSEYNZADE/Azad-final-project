@@ -18,7 +18,7 @@ import UserInformationPayment from "./components/basket/UserInformation-payment"
 import Delivery from "./components/basket/Delivery";
 import PaymentMethod from "./components/basket/PaymentMethod";
 import UserInformationProfile from "./components/basket/UserInformationProfile";
-
+import AboutUs from "./components/about-us/AboutUs";
 import { Routes, Route } from "react-router-dom";
 import { store } from "./store";
 import { Provider } from "react-redux";
@@ -58,6 +58,7 @@ const App = () => {
             path="/user-information-profile"
             element={<UserInformationProfile />}
           />
+          <Route path="/about-us" element={<AboutUs />} />
         </Routes>
 
         <Footer />

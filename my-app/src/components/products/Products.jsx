@@ -10,8 +10,6 @@ import Filter from "../../assets/Icons/filter .png";
 import Commerce from "../../library/commerce/Commerce";
 import MobileFilter from "../products/MobileFilter";
 import Cost from "../products/Cost";
-
-import ClipLoader from "react-spinners/ClipLoader";
 function Products({ products, count }) {
   const { categoryId } = useParams();
   const navigate = useNavigate();
@@ -58,9 +56,11 @@ function Products({ products, count }) {
             <li>
               <span>Telefonlar</span> <img src={RightIcon} alt="rightSide" />
             </li>
-            <li>
-              <span>Apple</span>
-            </li>
+            <Link to="/about-us">
+              <li>
+                <span>Haqqımızda</span>
+              </li>
+            </Link>
           </ul>
         </div>
 
