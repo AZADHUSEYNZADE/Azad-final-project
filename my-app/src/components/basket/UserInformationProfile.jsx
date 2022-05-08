@@ -6,6 +6,7 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import AddLocationIcon from "@mui/icons-material/AddLocation";
 import LogoutIcon from "@mui/icons-material/Logout";
 import EditIcon from "@mui/icons-material/Edit";
+import { Link } from "react-router-dom";
 function UserInformationProfile() {
   return (
     <div className="container mainUserProfileDiv">
@@ -15,10 +16,12 @@ function UserInformationProfile() {
           <ShoppingCartOutlinedIcon className="shopIcon" />
           <span>Sifarişlərim</span>
         </div>
-        <div className="myFavoriteCart">
-          <FavoriteBorderOutlinedIcon className="favoriteIcon" />
-          <span>Favorilərim</span>
-        </div>
+        <Link to="/my-favorite-products">
+          <div className="myFavoriteCart">
+            <FavoriteBorderOutlinedIcon className="favoriteIcon" />
+            <span>Favorilərim</span>
+          </div>
+        </Link>
         <div className="myPersonCart">
           <PersonOutlineOutlinedIcon className="personIcon" />
           <span>Şəxsi məlumatlar</span>

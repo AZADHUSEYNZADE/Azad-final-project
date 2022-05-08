@@ -1,0 +1,133 @@
+.mainFavoriteDiv {
+  display: flex;
+  margin-bottom: 150px;
+  .leftSideBasket {
+    width: 25%;
+    height: 330px;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-top: 30px;
+    h6 {
+      font-size: 20px;
+      line-height: 28px;
+      color: #4f4f4f;
+      margin-left: 20px;
+      padding-top: 20px;
+    }
+    .myShoppingCart {
+      margin-left: 20px;
+      margin-top: 20px;
+      position: relative;
+      .shopIcon {
+        position: absolute;
+        margin-top: 5px;
+        cursor: pointer;
+      }
+      span {
+        position: absolute;
+        margin-left: 40px;
+        margin-top: 5px;
+        font-size: 16px;
+        line-height: 24px;
+        cursor: pointer;
+      }
+    }
+    .myShoppingCart:hover {
+      color: red;
+    }
+    .myFavoriteCart:hover {
+      color: red;
+    }
+    .myPersonCart:hover {
+      color: red;
+    }
+    .myLocationCart:hover {
+      color: red;
+    }
+    .myLogOutCart:hover {
+      color: red;
+    }
+    .myFavoriteCart {
+      margin-left: 20px;
+      margin-top: 70px;
+      position: relative;
+      .favoriteIcon {
+        position: absolute;
+        margin-top: 5px;
+        cursor: pointer;
+      }
+      span {
+        position: absolute;
+        margin-left: 40px;
+        margin-top: 5px;
+        font-size: 16px;
+        line-height: 24px;
+        cursor: pointer;
+      }
+    }
+    .myPersonCart {
+      margin-left: 20px;
+      margin-top: 120px;
+      position: relative;
+      .personIcon {
+        position: absolute;
+        margin-top: 5px;
+        cursor: pointer;
+      }
+      span {
+        position: absolute;
+        margin-left: 40px;
+        margin-top: 5px;
+        font-size: 16px;
+        line-height: 24px;
+        cursor: pointer;
+      }
+    }
+    .myLocationCart {
+      margin-left: 20px;
+      margin-top: 170px;
+      position: relative;
+      .personIcon {
+        position: absolute;
+        margin-top: 5px;
+        cursor: pointer;
+      }
+      span {
+        position: absolute;
+        margin-left: 40px;
+        margin-top: 5px;
+        font-size: 16px;
+        line-height: 24px;
+        cursor: pointer;
+      }
+    }
+    .myLogOutCart {
+      margin-left: 20px;
+      margin-top: 220px;
+      position: relative;
+      .logOutIcon {
+        position: absolute;
+        margin-top: 5px;
+        cursor: pointer;
+      }
+      span {
+        position: absolute;
+        margin-left: 40px;
+        margin-top: 5px;
+        font-size: 16px;
+        line-height: 24px;
+        cursor: pointer;
+      }
+    }
+  }
+  .rightSideFavorite {
+    margin-top: 30px;
+    margin-left: 30px;
+    h6 {
+      font-size: 20px;
+      line-height: 28px;
+      color: #4f4f4f;
+      font-weight: 600;
+    }
+  }
+}

@@ -18,10 +18,13 @@ function BasketDetail() {
           <ShoppingCartOutlinedIcon className="shopIcon" />
           <span>Sifarişlərim</span>
         </div>
-        <div className="myFavoriteCart">
-          <FavoriteBorderOutlinedIcon className="favoriteIcon" />
-          <span>Favorilərim</span>
-        </div>
+        <Link to="/my-favorite-products">
+          <div className="myFavoriteCart">
+            <FavoriteBorderOutlinedIcon className="favoriteIcon" />
+            <span>Favorilərim</span>
+          </div>
+        </Link>
+
         <div className="myPersonCart">
           <Link to="/user-information">
             <PersonOutlineOutlinedIcon className="personIcon" />
