@@ -6,7 +6,13 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import AddLocationIcon from "@mui/icons-material/AddLocation";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectAllFavorites } from "../../features/favoriteSlice";
+
 function Favorite() {
+  // const favorites = useSelector(favorites);
+  const favorites = useSelector(selectAllFavorites);
+  console.log(favorites, "+++++");
   return (
     <div className="container mainFavoriteDiv">
       <div className="leftSideBasket">
@@ -41,6 +47,9 @@ function Favorite() {
       </div>
       <div className="rightSideFavorite">
         <h6>Favorilərim</h6>
+        {favorites.map((elem) => (
+          <h1>{elem.name}</h1>
+        ))}
       </div>
     </div>
   );

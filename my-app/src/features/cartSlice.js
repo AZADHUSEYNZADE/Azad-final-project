@@ -11,7 +11,14 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart(state, action) {
-      state.cart.push(action.payload);
+      let a = state.cart.every((item) => {
+        return item.product.id !== action.payload.product.id;
+      });
+      if (a) {
+        state.cart.push(action.payload);
+      } else {
+        state.cart.map((elem) => (elem.count += action.payload.count));
+      }
     },
     incrementCount(state, action) {
       const updatedCart = state.cart.map((cartItem) => {
@@ -24,7 +31,10 @@ export const cartSlice = createSlice({
     },
     decrementCount(state, action) {
       const updatedCart = state.cart.map((cartItem) => {
-        if (cartItem.product.id === action.payload.productId) {
+        if (
+          cartItem.product.id === action.payload.productId &&
+          cartItem.count > 0
+        ) {
           return { ...cartItem, count: cartItem.count - 1 };
         }
         return cartItem;
@@ -32,15 +42,21 @@ export const cartSlice = createSlice({
       state.cart = updatedCart;
     },
     deleteItem(state, action) {
-      const updatedCart = state.cart.filter(
-        (cartItem) => cartItem.id !== action.payload.productId
+      let a = state.cart.filter(
+        (cartItem) => cartItem.product.id !== action.payload
       );
-      state.cart = updatedCart;
+
+      state.cart = a;
     },
   },
 });
 
-export const { addToCart, incrementCount, decrementCount, deleteItem } =
-  cartSlice.actions;
+export const {
+  addToCart,
+  incrementCount,
+  decrementCount,
+  deleteItem,
+  addFavorite,
+} = cartSlice.actions;
 export const selectCart = (state) => state.cart.cart;
 export default cartSlice.reducer;

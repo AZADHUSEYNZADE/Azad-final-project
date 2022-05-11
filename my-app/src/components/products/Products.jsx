@@ -10,6 +10,8 @@ import Filter from "../../assets/Icons/filter .png";
 import Commerce from "../../library/commerce/Commerce";
 import MobileFilter from "../products/MobileFilter";
 import Cost from "../products/Cost";
+import { useDispatch } from "react-redux";
+import { handleFavorite } from "../../features/favoriteSlice";
 function Products({ products, count }) {
   const { categoryId } = useParams();
   const navigate = useNavigate();
@@ -18,6 +20,8 @@ function Products({ products, count }) {
   const [isVisible, setIsVisible] = useState(false);
   const [filteredItems, setFilteredItems] = useState();
   const [cost, setCost] = useState(false);
+
+  const dispatch = useDispatch();
 
   React.useEffect(() => {
     const fetchAllProducts = () => {
@@ -167,13 +171,16 @@ function Products({ products, count }) {
           <div className="imagesOfProduct">
             {filteredItems &&
               filteredItems.map((item, index) => (
-                <Link to={`/product-details/${item.id}`}>
-                  <div className="productCard">
-                    <img src={item.image.url} alt="pic" />
-                    <p className="itemName">{item.name}</p>
-                    <p className="itemPrice">{item.price.formatted} $</p>
-                  </div>
-                </Link>
+                // <Link to={`/product-details/${item.id}`}>
+                <div className="productCard">
+                  <img src={item.image.url} alt="pic" />
+                  <p className="itemName">{item.name}</p>
+                  <p className="itemPrice">{item.price.formatted} $</p>
+                  <button onClick={() => dispatch(handleFavorite(item))}>
+                    Add Fav
+                  </button>
+                </div>
+                // </Link>
               ))}
           </div>
         </div>

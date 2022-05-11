@@ -14,7 +14,7 @@ const PaginatedProducts = ({ productsPerPage }) => {
   React.useEffect(() => {
     const fetchProducts = () => {
       Commerce.products
-        .list({ category_slug: [categoryId] })
+        .list({ category_slug: [categoryId], limit: 100 })
         .then((products) => {
           setProducts(products.data);
           setAllProductsCount(products.data.length);

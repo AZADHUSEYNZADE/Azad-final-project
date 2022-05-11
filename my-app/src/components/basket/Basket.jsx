@@ -16,16 +16,14 @@ function Basket() {
 
   const dispatch = useDispatch();
 
-  const total = cart.reduce((prev, { product }) => {
-    return prev + product.price.raw;
+  const total = cart.reduce((prev, { product, count }) => {
+    return prev + product.price.raw * count;
   }, 0);
 
-  const sum = 5 + 15 - 10;
-  const sum2 = total + sum;
-
+  const cartCount = useSelector((state) => state.cart.cart.length);
   return (
     <div className="container">
-      <h6 className="countOfProductBasket">Səbət ({cart.length} məhsul)</h6>
+      <h6 className="countOfProductBasket">Səbət ({cartCount} məhsul)</h6>
       <div className="mainBasketDiv3">
         <div className="basketDivFlex">
           {cart.map(({ product, count }) => {
@@ -40,7 +38,9 @@ function Basket() {
                     <li>
                       <span className="color">Rəng:</span>
                       <span className="colorName">WHITE</span>
-                      <span className="cost">{product.price.formatted}</span>
+                      <span className="cost">
+                        {count * product.price.formatted}
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -52,6 +52,7 @@ function Basket() {
                   >
                     -
                   </button>
+
                   <span>{count}</span>
                   <button
                     onClick={() => {
@@ -64,7 +65,7 @@ function Basket() {
                 <DeleteIcon
                   className="deleteIcon"
                   onClick={() => {
-                    dispatch(deleteItem({ productId: product.id }));
+                    dispatch(deleteItem(product.id));
                   }}
                 />
               </div>
@@ -77,24 +78,24 @@ function Basket() {
           <ul>
             <li>
               <span>Məbləğ </span>
-              <span>{total}</span>
+              <span>{total} $</span>
             </li>
             <li>
               <span>Çatdırılma </span>
-              <span>15.00 $</span>
+              <span> 0.00 $</span>
             </li>
             <li>
               <span>Hədiyyə paketi </span>
-              <span>5.00 $</span>
+              <span>0.00 $</span>
             </li>
             <li>
               <span>Promo kod </span>
-              <span>-10.00 $</span>
+              <span>0.00 $</span>
             </li>
             <div className="totalLine"></div>
             <li className="totalLiDiv">
               <span className="totalName">Cəmi </span>
-              <span className="total">{sum2}</span>
+              <span className="total">{total} $</span>
             </li>
           </ul>
         </div>

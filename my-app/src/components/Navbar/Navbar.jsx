@@ -6,7 +6,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import Sidebar from "../Sidebar/Sidebar";
 
 import Tello from "../../assets/Icons/Tello-logo.svg";
-import { Badge } from "@mui/material";
+import { Badge, IconButton } from "@mui/material";
 
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
@@ -15,13 +15,15 @@ import { Link } from "react-router-dom";
 import subPic from "../../assets/Images/subPic.png";
 import { selectCart } from "../../features/cartSlice";
 import { useSelector } from "react-redux";
-
+import { selectAllFavorites } from "../../features/favoriteSlice";
 const Navbar = ({ setShowSidebar }) => {
   const cart = useSelector(selectCart);
+  const favorites = useSelector(selectAllFavorites);
   const [isOpen, setIsOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [allProducts, setAllProducts] = useState([]);
 
+  const cartCount = useSelector((state) => state.cart.cart.length);
   const fetchAllProducts = () => {
     Commerce.categories
       .retrieve("mehsullar", { type: "slug", depth: "3" })
@@ -69,15 +71,20 @@ const Navbar = ({ setShowSidebar }) => {
                 <PersonOutlineOutlinedIcon />
               </Link>
               <Link to="my-orders">
-                <FavoriteBorderOutlinedIcon />
+                <IconButton aria-label="cart">
+                  <Badge badgeContent={favorites?.lenght} color="secondary">
+                    <FavoriteBorderOutlinedIcon />
+                  </Badge>
+                </IconButton>
               </Link>
 
               <Link to="basket">
                 <Badge
-                  badgeContent={cart.reduce(
-                    (prevValue, cartItem) => cartItem.count + prevValue,
-                    0
-                  )}
+                  // badgeContent={cart.reduce(
+                  //   (prevValue, cartItem) => cartItem.count + prevValue,
+                  //   0
+                  // )}
+                  badgeContent={cartCount}
                   color="primary"
                 >
                   <ShoppingCartOutlinedIcon />
