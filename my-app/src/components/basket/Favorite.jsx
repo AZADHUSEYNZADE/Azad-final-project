@@ -45,11 +45,21 @@ function Favorite() {
           <span>Çıxış</span>
         </div>
       </div>
+
       <div className="rightSideFavorite">
-        <h6>Favorilərim</h6>
-        {favorites.map((elem) => (
-          <h1>{elem.name}</h1>
-        ))}
+        <div>
+          <h6 className="myprofMobile">Profilim</h6>
+          <h6>Favorilərim</h6>
+        </div>
+        <div className="mainFavoriteDiv">
+          {favorites.map((elem) => (
+            <div className="productCard">
+              <img src={elem.image.url} alt="pic" />
+              <p className="itemName">{elem.name}</p>
+              <p className="itemPrice">{elem.price.formatted} $</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

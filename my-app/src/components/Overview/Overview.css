@@ -5,8 +5,8 @@
   max-width: 1270px;
   margin: 0 auto;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   gap: 1rem;
   padding: 1rem;
 }
@@ -20,8 +20,8 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 1rem;
 }
 
@@ -47,47 +47,65 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 1rem;
 }
 
 .overview .col .lg-overview {
-  background-image: url("../../assets/Images/xiaomi.png"), linear-gradient(150.83deg, rgba(245, 146, 146, 0.3) 0%, rgba(244, 194, 194, 0.25) 52.95%, rgba(242, 242, 242, 0) 100%);
+  background-image: url("../../assets/Images/xiaomi.png"),
+    linear-gradient(
+      150.83deg,
+      rgba(245, 146, 146, 0.3) 0%,
+      rgba(244, 194, 194, 0.25) 52.95%,
+      rgba(242, 242, 242, 0) 100%
+    );
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .overview .col .sm-overview:first-child {
-  background-image: url("../../assets/Images/smart-watch.png"), linear-gradient(150.83deg, rgba(245, 146, 146, 0.3) 0%, rgba(244, 194, 194, 0.25) 52.95%, rgba(242, 242, 242, 0) 100%);
+  background-image: url("../../assets/Images/smart-watch.png"),
+    linear-gradient(
+      150.83deg,
+      rgba(245, 146, 146, 0.3) 0%,
+      rgba(244, 194, 194, 0.25) 52.95%,
+      rgba(242, 242, 242, 0) 100%
+    );
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: contain;
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .overview .col .sm-overview:last-child {
-  background-image: url("../../assets/Images/accessories.png"), linear-gradient(150.83deg, rgba(245, 146, 146, 0.3) 0%, rgba(244, 194, 194, 0.25) 52.95%, rgba(242, 242, 242, 0) 100%);
+  background-image: url("../../assets/Images/accessories.png"),
+    linear-gradient(
+      150.83deg,
+      rgba(245, 146, 146, 0.3) 0%,
+      rgba(244, 194, 194, 0.25) 52.95%,
+      rgba(242, 242, 242, 0) 100%
+    );
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: contain;
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 @media screen and (max-width: 600px) {
   .overview {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   .overview .col {
     width: 100%;

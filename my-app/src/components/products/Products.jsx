@@ -10,6 +10,14 @@ import Filter from "../../assets/Icons/filter .png";
 import Commerce from "../../library/commerce/Commerce";
 import MobileFilter from "../products/MobileFilter";
 import Cost from "../products/Cost";
+import { Card, Typography, Box, Checkbox, IconButton } from "@mui/material";
+import { pink } from "@mui/material/colors";
+
+import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
+import Favorite from "@mui/icons-material/Favorite";
+import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
+// import Favorite from "../../assets/Images/favorite2.jpg";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { useDispatch } from "react-redux";
 import { handleFavorite } from "../../features/favoriteSlice";
 function Products({ products, count }) {
@@ -173,14 +181,27 @@ function Products({ products, count }) {
               filteredItems.map((item, index) => (
                 // <Link to={`/product-details/${item.id}`}>
                 <div className="productCard">
-                  <img src={item.image.url} alt="pic" />
+                  <div className="favoriteDiv">
+                    <Checkbox
+                      onClick={() => dispatch(handleFavorite(item))}
+                      icon={<FavoriteBorder color="inherit" />}
+                      checkedIcon={<Favorite color="inherit" />}
+                      sx={{
+                        color: pink[800],
+                        "&.Mui-checked": {
+                          color: pink[600],
+                        },
+                        position: "absolute",
+                        right: 0,
+                      }}
+                    />
+                  </div>
+                  <Link to={`/product-details/${item.id}`}>
+                    <img src={item.image.url} alt="pic" />
+                  </Link>
                   <p className="itemName">{item.name}</p>
                   <p className="itemPrice">{item.price.formatted} $</p>
-                  <button onClick={() => dispatch(handleFavorite(item))}>
-                    Add Fav
-                  </button>
                 </div>
-                // </Link>
               ))}
           </div>
         </div>

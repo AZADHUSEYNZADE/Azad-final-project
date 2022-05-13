@@ -10,7 +10,7 @@ export const favoritesSlice = createSlice({
   reducers: {
     handleFavorite: (state, action) => {
       const isExist = state.favorites.every(
-        (item) => item.id === action.payload.id
+        (item) => item.id !== action.payload.id
       );
       if (!isExist) {
         console.log("includes", action.payload);

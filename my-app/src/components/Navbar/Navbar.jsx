@@ -24,6 +24,7 @@ const Navbar = ({ setShowSidebar }) => {
   const [allProducts, setAllProducts] = useState([]);
 
   const cartCount = useSelector((state) => state.cart.cart.length);
+  // const favoriteCount = useSelector((state) => state.cart.favorites.length);
   const fetchAllProducts = () => {
     Commerce.categories
       .retrieve("mehsullar", { type: "slug", depth: "3" })
@@ -72,7 +73,7 @@ const Navbar = ({ setShowSidebar }) => {
               </Link>
               <Link to="my-orders">
                 <IconButton aria-label="cart">
-                  <Badge badgeContent={favorites?.lenght} color="secondary">
+                  <Badge badgeContent={favorites?.length} color="secondary">
                     <FavoriteBorderOutlinedIcon />
                   </Badge>
                 </IconButton>
