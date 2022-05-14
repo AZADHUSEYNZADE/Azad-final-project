@@ -125,7 +125,12 @@ function AboutProduct() {
               <span className="newCost">{product?.price?.formatted} $</span>
             </div>
             <div>
-              <button className="mobileButton">Səbətə at</button>
+              <button
+                onClick={() => dispatch(addToCart({ product, count }))}
+                className="mobileButton"
+              >
+                Səbətə at
+              </button>
             </div>
           </div>
 

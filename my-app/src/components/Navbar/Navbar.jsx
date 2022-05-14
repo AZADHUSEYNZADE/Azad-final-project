@@ -80,14 +80,7 @@ const Navbar = ({ setShowSidebar }) => {
               </Link>
 
               <Link to="basket">
-                <Badge
-                  // badgeContent={cart.reduce(
-                  //   (prevValue, cartItem) => cartItem.count + prevValue,
-                  //   0
-                  // )}
-                  badgeContent={cartCount}
-                  color="primary"
-                >
+                <Badge badgeContent={cartCount} color="primary">
                   <ShoppingCartOutlinedIcon />
                 </Badge>
               </Link>

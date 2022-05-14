@@ -1,3 +1,4 @@
+@import "../../styles/breakpoints";
 .overview {
   display: flex;
   max-width: 1270px;
@@ -5,6 +6,7 @@
   justify-content: center;
   gap: 1rem;
   padding: 1rem;
+
   .col {
     width: 50%;
     max-width: 592px;
@@ -13,7 +15,11 @@
     flex-direction: column;
     gap: 1rem;
     > div {
-      padding: 2.5rem 2rem;
+      // padding: 2.5rem 2rem;
+      padding: 1rem;
+      @include md {
+        padding: 2rem;
+      }
       h2 {
         font-weight: 500;
         margin-bottom: 1rem;

@@ -101,29 +101,52 @@ function Basket() {
         </div>
       </div>
       <div className="container mobileBasket">
-        <div className="firstPart">
-          <input type="checkbox" />
-          <img src={BasketImg} alt="img" />
-          <DeleteIcon className="deleteIconMobile" />
-        </div>
-        <h6>
-          iPhone 12, 64 GB, Bənövşəyi, (MJNM3) Golden 5 G 8690604083886 0212042
-        </h6>
-        <div className="secondPart">
-          <ul>
-            <li>
-              <span className="colorMobile">Rəng:</span>
-              <span className="colorNameMobile">Bənövşəyi</span>
-              <br />
-              <span className="costMobile">240 $</span>
-            </li>
-          </ul>
-          <div className="buttonsMobile">
-            <button>-</button>
-            <span>1</span>
-            <button>+</button>
-          </div>
-        </div>
+        {cart.map(({ product, count }) => {
+          return (
+            <div className="flexBasket">
+              <div className="firstPart">
+                <input type="checkbox" />
+                <img src={product.assets[0].url} alt="img" />
+                <DeleteIcon
+                  className="deleteIconMobile"
+                  onClick={() => {
+                    dispatch(deleteItem(product.id));
+                  }}
+                />
+              </div>
+              <h6>{product.name}</h6>
+              <div className="secondPart">
+                <ul>
+                  <li>
+                    <span className="colorMobile">Rəng:</span>
+                    <span className="colorNameMobile">Bənövşəyi</span>
+                    <br />
+                    <span className="costMobile">
+                      {count * product.price.formatted}
+                    </span>
+                  </li>
+                </ul>
+                <div className="buttonsMobile">
+                  <button
+                    onClick={() => {
+                      dispatch(decrementCount({ productId: product.id }));
+                    }}
+                  >
+                    -
+                  </button>
+                  <span>{count}</span>
+                  <button
+                    onClick={() => {
+                      dispatch(incrementCount({ productId: product.id }));
+                    }}
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

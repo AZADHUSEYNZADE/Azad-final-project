@@ -10,7 +10,6 @@ import { useSelector } from "react-redux";
 import { selectAllFavorites } from "../../features/favoriteSlice";
 
 function Favorite() {
-  // const favorites = useSelector(favorites);
   const favorites = useSelector(selectAllFavorites);
   console.log(favorites, "+++++");
   return (

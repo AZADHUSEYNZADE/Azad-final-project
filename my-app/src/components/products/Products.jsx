@@ -18,8 +18,8 @@ import Favorite from "@mui/icons-material/Favorite";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 // import Favorite from "../../assets/Images/favorite2.jpg";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import { useDispatch } from "react-redux";
-import { handleFavorite } from "../../features/favoriteSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { handleFavorite, setList } from "../../features/favoriteSlice";
 function Products({ products, count }) {
   const { categoryId } = useParams();
   const navigate = useNavigate();
@@ -30,6 +30,16 @@ function Products({ products, count }) {
   const [cost, setCost] = useState(false);
 
   const dispatch = useDispatch();
+  const listaa = useSelector((item) => item.favorites.listfav);
+  console.log(listaa, "aaaaa");
+
+  React.useEffect(() => {
+    if (listaa) {
+      console.log(2);
+    } else {
+      console.log(-2);
+    }
+  });
 
   React.useEffect(() => {
     const fetchAllProducts = () => {
@@ -179,11 +189,13 @@ function Products({ products, count }) {
           <div className="imagesOfProduct">
             {filteredItems &&
               filteredItems.map((item, index) => (
-                // <Link to={`/product-details/${item.id}`}>
                 <div className="productCard">
                   <div className="favoriteDiv">
                     <Checkbox
-                      onClick={() => dispatch(handleFavorite(item))}
+                      onClick={() => {
+                        dispatch(handleFavorite(item));
+                        dispatch(setList(item.id));
+                      }}
                       icon={<FavoriteBorder color="inherit" />}
                       checkedIcon={<Favorite color="inherit" />}
                       sx={{

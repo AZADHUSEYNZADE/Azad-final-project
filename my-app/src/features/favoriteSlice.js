@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   favorites: [],
+  listfav: [],
 };
 
 export const favoritesSlice = createSlice({
@@ -13,18 +14,19 @@ export const favoritesSlice = createSlice({
         (item) => item.id !== action.payload.id
       );
       if (!isExist) {
-        console.log("includes", action.payload);
         state.favorites = state.favorites.filter(
           (item) => item.id !== action.payload.id
         );
       } else if (isExist) {
         state.favorites.push(action.payload);
-        console.log("!includes", "hiiiiiiiiiiiiiiiiiiiiiiiii");
       }
+    },
+    setList: (state, action) => {
+      state.listfav.push(action.payload);
     },
   },
 });
 
-export const { handleFavorite } = favoritesSlice.actions;
+export const { handleFavorite, setList } = favoritesSlice.actions;
 export const selectAllFavorites = (state) => state.favorites.favorites;
 export default favoritesSlice.reducer;
