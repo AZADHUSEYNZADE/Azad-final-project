@@ -115,7 +115,7 @@ function Basket() {
                 />
               </div>
               <h6>{product.name}</h6>
-              <div className="secondPart">
+              <div className="secondPartBasket">
                 <ul>
                   <li>
                     <span className="colorMobile">Rəng:</span>

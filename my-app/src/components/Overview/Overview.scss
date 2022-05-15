@@ -64,7 +64,7 @@
       flex: 1;
     }
     .sm-overview:last-child {
-      background-image: url("../../assets/Images/accessories.png"),
+      background-image: url("../../assets/Images/accessories3.png"),
         linear-gradient(
           150.83deg,
           rgba(245, 146, 146, 0.3) 0%,
@@ -81,7 +81,10 @@
     flex-direction: column;
     .col {
       width: 100%;
-      .sm-overview {
+      > div {
+        button {
+          font-size: 13px;
+        }
       }
     }
   }

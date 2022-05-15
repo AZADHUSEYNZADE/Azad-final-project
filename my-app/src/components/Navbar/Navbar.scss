@@ -147,3 +147,95 @@ nav {
   color: #4f4f4f;
   text-align: left;
 }
+.mobileMenuDiv {
+  display: none;
+}
+.project {
+  display: none;
+}
+.search-Img {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .menuDesk {
+    display: none;
+  }
+  nav {
+    .nav-logo {
+      .project {
+        display: block;
+        font-size: 32px;
+        font-weight: 600;
+      }
+      .cancel-X {
+        color: red;
+      }
+      .search-Img {
+        display: block;
+        margin-left: 120px;
+        cursor: pointer;
+      }
+    }
+    .nav-elements {
+      display: none;
+    }
+    .mobile-search {
+      display: none;
+    }
+  }
+
+  .nav-logo .telloImg {
+    display: none;
+  }
+  .mobileMenuDiv {
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0px;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    z-index: 10;
+
+    .nav-links {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      .true-X {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 13px;
+
+        .project {
+          display: block;
+          font-size: 32px;
+          font-weight: 600;
+          margin-right: 120px;
+          position: relative;
+        }
+        .cancel-X {
+          color: red;
+        }
+        .search-Img {
+          display: block;
+          position: absolute;
+          right: 20px;
+          top: 25px;
+          cursor: pointer;
+        }
+      }
+      .parentLi {
+        font-size: 20px;
+        line-height: 28px;
+        color: #4f4f4f;
+        padding: 22px 0px;
+        display: flex;
+        flex-direction: row;
+        cursor: pointer;
+      }
+    }
+  }
+}

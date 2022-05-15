@@ -5,6 +5,19 @@
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .checkedInput {
+    width: 20px;
+    height: 20px;
+  }
+  .nameOfCategory {
+    font-size: 14px;
+    line-height: 20px;
+    color: #4f4f4f;
+    margin-left: 15px;
+    margin-top: 10px;
+    font-weight: 500;
   }
   .brand {
     display: flex;

@@ -10,14 +10,11 @@ import Filter from "../../assets/Icons/filter .png";
 import Commerce from "../../library/commerce/Commerce";
 import MobileFilter from "../products/MobileFilter";
 import Cost from "../products/Cost";
-import { Card, Typography, Box, Checkbox, IconButton } from "@mui/material";
+import { Checkbox } from "@mui/material";
 import { pink } from "@mui/material/colors";
 
 import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import Favorite from "@mui/icons-material/Favorite";
-import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
-// import Favorite from "../../assets/Images/favorite2.jpg";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { useDispatch, useSelector } from "react-redux";
 import { handleFavorite, setList } from "../../features/favoriteSlice";
 function Products({ products, count }) {
@@ -32,14 +29,6 @@ function Products({ products, count }) {
   const dispatch = useDispatch();
   const listaa = useSelector((item) => item.favorites.listfav);
   console.log(listaa, "aaaaa");
-
-  React.useEffect(() => {
-    if (listaa) {
-      console.log(2);
-    } else {
-      console.log(-2);
-    }
-  });
 
   React.useEffect(() => {
     const fetchAllProducts = () => {
@@ -128,7 +117,7 @@ function Products({ products, count }) {
           <div className="leftSideCategories">
             <div className="brand">
               <p className="brandCount">
-                Brend <span>({allProducts.length})</span>{" "}
+                Brend <span>({allProducts.length})</span>
               </p>
               <img className="decrementCount" src={MinusIcon} alt="minus" />
             </div>
@@ -184,6 +173,7 @@ function Products({ products, count }) {
                 <div className="lineOfTypes"></div>
               </div>
             </div>
+
             {cost && <Cost findItem={findItem} />}
           </div>
           <div className="imagesOfProduct">

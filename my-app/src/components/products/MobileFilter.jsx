@@ -1,20 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import "./MobileFilter.scss";
 import MinusIcon from "../../assets/Icons/minus.png";
 import PlusIcon from "../../assets/Icons/plus.png";
 
-// import Commerce from "../../library/commerce/Commerce";
-
 function MobileFilter({ allProducts, setCurrentCategory, currentCategory }) {
   const navigate = useNavigate();
+  const [cost, setCost] = useState(false);
 
   return (
     <div className="filterComponent">
       <div className="leftSideCategories">
         <div className="brand">
-          <p className="brandCount">Brend (4)</p>
+          <p className="brandCount">Brend ({allProducts.length})</p>
           <img className="decrementCount" src={MinusIcon} alt="minus" />
         </div>
         <div className="lineOfBrand"></div>
@@ -31,7 +30,6 @@ function MobileFilter({ allProducts, setCurrentCategory, currentCategory }) {
                     type="checkbox"
                     id={`category-${item.name}`}
                     checked={currentCategory === item.name.toLowerCase()}
-                    style={{ marginRight: "8px" }}
                     onInput={() => {
                       setCurrentCategory(item.name.toLowerCase());
                       navigate(`/products/${item.name.toLowerCase()}`, {
@@ -39,33 +37,29 @@ function MobileFilter({ allProducts, setCurrentCategory, currentCategory }) {
                       });
                     }}
                   />
-                  {item.name}
+                  <span className="nameOfCategory">{item.name}</span>
                 </label>
               </li>
             ))}
           </ul>
-          <div className="mainTypeDiv">
-            <div className="types">
-              <p>Type</p>
-              <img className="incrementCount" src={PlusIcon} alt="plus" />
-            </div>
+          {/* <div className="mainTypeDiv">
             <div className="lineOfTypes"></div>
-            <div className="types">
-              <p>Category</p>
-              <img className="incrementCount" src={PlusIcon} alt="plus" />
-            </div>
-            <div className="lineOfTypes"></div>
-            <div className="types">
-              <p>Rəng</p>
-              <img className="incrementCount" src={PlusIcon} alt="plus" />
-            </div>
+
             <div className="lineOfTypes"></div>
             <div className="types">
               <p>Qiymət</p>
-              <img className="incrementCount" src={MinusIcon} alt="plus" />
+
+              <img
+                onClick={() => {
+                  setCost(!cost);
+                }}
+                className="incrementCount"
+                src={cost ? MinusIcon : PlusIcon}
+                alt="plus"
+              />
             </div>
             <div className="lineOfTypes"></div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

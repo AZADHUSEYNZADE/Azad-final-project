@@ -10,7 +10,8 @@ const Overview = () => {
           <h2>Telefon</h2>
           <p>Məhsul sayı: 322</p>
           <button>
-            Məhsullara keçid <img src={showAll} alt="show all" />
+            Məhsullara keçid{" "}
+            <img className="showAllImg" src={showAll} alt="show all" />
           </button>
         </div>
       </div>
@@ -19,14 +20,16 @@ const Overview = () => {
           <h2>Smart Saat</h2>
           <p>Məhsul sayı: 322</p>
           <button>
-            Məhsullara keçid <img src={showAll} alt="show all" />
+            Məhsullara keçid{" "}
+            <img className="showAllImg" src={showAll} alt="show all" />
           </button>
         </div>
         <div className="sm-overview">
           <h2>Aksesuar</h2>
           <p>Məhsul sayı: 322</p>
           <button>
-            Məhsullara keçid <img src={showAll} alt="show all" />
+            Məhsullara keçid{" "}
+            <img className="showAllImg" src={showAll} alt="show all" />
           </button>
         </div>
       </div>
