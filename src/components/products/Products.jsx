@@ -16,19 +16,22 @@ import { pink } from "@mui/material/colors";
 import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import Favorite from "@mui/icons-material/Favorite";
 import { useDispatch, useSelector } from "react-redux";
-import { handleFavorite, setList } from "../../features/favoriteSlice";
-function Products({ products, count }) {
+import {
+  handleFavorite,
+  selectAllFavorites,
+  setList,
+} from "../../features/favoriteSlice";
+function Products({ products, count, findItem }) {
   const { categoryId } = useParams();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const [currentCategory, setCurrentCategory] = useState(categoryId);
   const [allProducts, setAllProducts] = useState([]);
   const [isVisible, setIsVisible] = useState(false);
-  const [filteredItems, setFilteredItems] = useState();
   const [cost, setCost] = useState(false);
 
-  const dispatch = useDispatch();
-  const listaa = useSelector((item) => item.favorites.listfav);
-  console.log(listaa, "aaaaa");
+  const favs = useSelector(selectAllFavorites);
 
   React.useEffect(() => {
     const fetchAllProducts = () => {
@@ -42,19 +45,6 @@ function Products({ products, count }) {
 
     fetchAllProducts();
   }, []);
-
-  React.useEffect(() => {
-    setFilteredItems(products);
-  }, [products]);
-
-  console.log(products);
-  const findItem = (min, max) => {
-    const filteredProducts = products.filter((item) => {
-      return +item.price.formatted <= max && +item.price.formatted >= min;
-    });
-
-    setFilteredItems(filteredProducts);
-  };
 
   return (
     <>
@@ -177,15 +167,17 @@ function Products({ products, count }) {
             {cost && <Cost findItem={findItem} />}
           </div>
           <div className="imagesOfProduct">
-            {filteredItems &&
-              filteredItems.map((item, index) => (
+            {products &&
+              products.map((item, index) => (
                 <div className="productCard">
                   <div className="favoriteDiv">
+                    {console.log(favs)}
                     <Checkbox
                       onClick={() => {
                         dispatch(handleFavorite(item));
                         dispatch(setList(item.id));
                       }}
+                      checked={Boolean(favs.find((fav) => fav.id == item.id))}
                       icon={<FavoriteBorder color="inherit" />}
                       checkedIcon={<Favorite color="inherit" />}
                       sx={{

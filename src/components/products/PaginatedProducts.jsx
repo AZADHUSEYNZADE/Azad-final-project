@@ -8,9 +8,13 @@ import Backdrop from "@mui/material/Backdrop";
 import CircularProgress from "@mui/material/CircularProgress";
 const PaginatedProducts = ({ productsPerPage }) => {
   const { categoryId } = useParams();
+  const [open, setOpen] = React.useState(true);
   const [products, setProducts] = useState([]);
   const [allProductsCount, setAllProductsCount] = useState(0);
-  const [open, setOpen] = React.useState(true);
+  const [currentItems, setCurrentItems] = useState(products);
+  const [pageCount, setPageCount] = useState(0);
+  const [itemOffset, setItemOffset] = useState(0);
+
   React.useEffect(() => {
     const fetchProducts = () => {
       Commerce.products
@@ -28,10 +32,6 @@ const PaginatedProducts = ({ productsPerPage }) => {
     fetchProducts();
   }, [categoryId]);
 
-  const [currentItems, setCurrentItems] = useState(null);
-  const [pageCount, setPageCount] = useState(0);
-  const [itemOffset, setItemOffset] = useState(0);
-
   useEffect(() => {
     const endOffset = itemOffset + productsPerPage;
     console.log(`Loading items from ${itemOffset} to ${endOffset}`);
@@ -48,6 +48,14 @@ const PaginatedProducts = ({ productsPerPage }) => {
     setItemOffset(newOffset);
   };
 
+  const findItem = (min, max) => {
+    const filteredProducts = products.filter((item) => {
+      return +item.price.formatted <= max && +item.price.formatted >= min;
+    });
+
+    setProducts(filteredProducts);
+  };
+
   return (
     <>
       <Backdrop
@@ -58,7 +66,11 @@ const PaginatedProducts = ({ productsPerPage }) => {
       </Backdrop>
 
       {currentItems && allProductsCount && (
-        <Products products={currentItems} count={allProductsCount} />
+        <Products
+          products={currentItems}
+          count={allProductsCount}
+          findItem={findItem}
+        />
       )}
       <ReactPaginate
         breakLabel="..."
