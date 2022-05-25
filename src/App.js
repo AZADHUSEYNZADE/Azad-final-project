@@ -5,7 +5,7 @@ import PaginatedProducts from "./components/products/PaginatedProducts";
 import Home from "./pages/Home";
 import Detail from "./pages/Detail";
 import Footer from "./components/footer/Footer";
-import Questions from "./components/footer/Questions";
+import Questions from "./components/FAQ/Questions.jsx";
 import Login from "./components/login/Login";
 import SignUp from "./components/login/SignUp";
 import MyOrders from "./components/basket/MyOrders";
