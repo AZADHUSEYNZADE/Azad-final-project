@@ -32,7 +32,7 @@ function Cost({ findItem }) {
         className="filterCostButton"
         onClick={() => findItem(minCost, maxCost)}
       >
-        Add
+        Search
       </button>
     </>
   );

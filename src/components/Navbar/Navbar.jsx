@@ -74,9 +74,11 @@ const Navbar = ({ setShowSidebar }) => {
               </Link>
               <Link to="my-orders">
                 <IconButton aria-label="cart">
-                  <Badge badgeContent={favorites?.length} color="secondary">
-                    <FavoriteBorderOutlinedIcon />
-                  </Badge>
+                  <Link to="my-favorite-products">
+                    <Badge badgeContent={favorites?.length} color="secondary">
+                      <FavoriteBorderOutlinedIcon />
+                    </Badge>
+                  </Link>
                 </IconButton>
               </Link>
 

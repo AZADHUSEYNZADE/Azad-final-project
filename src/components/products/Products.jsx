@@ -6,16 +6,16 @@ import MinusIcon from "../../assets/Icons/minus.png";
 import PlusIcon from "../../assets/Icons/plus.png";
 import CancelIcon from "../../assets/Icons/cancel.png";
 import Siralama from "../../assets/Icons/siralama.png";
-import Filter from "../../assets/Icons/filter .png";
 import Commerce from "../../library/commerce/Commerce";
 import MobileFilter from "../products/MobileFilter";
 import Cost from "../products/Cost";
 import { Checkbox } from "@mui/material";
 import { pink } from "@mui/material/colors";
-
+import { AiOutlineMenu } from "react-icons/ai";
 import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import Favorite from "@mui/icons-material/Favorite";
 import { useDispatch, useSelector } from "react-redux";
+
 import {
   handleFavorite,
   selectAllFavorites,
@@ -68,10 +68,14 @@ function Products({ products, count, findItem }) {
         <div
           className="cancelDiv"
           onClick={() => {
-            setIsVisible(false);
+            setIsVisible(!isVisible);
           }}
         >
-          <img src={CancelIcon} alt="cancelImg" />
+          {isVisible ? (
+            <img src={CancelIcon} alt="cancelImg" />
+          ) : (
+            <AiOutlineMenu />
+          )}
           <span> Filterləmələr</span>
         </div>
 
@@ -87,19 +91,20 @@ function Products({ products, count, findItem }) {
             }}
             className="filter"
           >
-            <img src={Filter} alt="filter" />
             <span>Filterləmələr</span>
           </div>
         </div>
         <div className="mobileFilterLine2"></div>
 
         {isVisible && (
-          <MobileFilter
-            className="mobileFilterOnly"
-            allProducts={allProducts}
-            setCurrentCategory={setCurrentCategory}
-            currentCategory={currentCategory}
-          />
+          <>
+            <MobileFilter
+              className="mobileFilterOnly"
+              allProducts={allProducts}
+              setCurrentCategory={setCurrentCategory}
+              currentCategory={currentCategory}
+            />
+          </>
         )}
 
         {count && <p className="countOfProducts">{count} Məhsul tapıldı</p>}
@@ -171,7 +176,6 @@ function Products({ products, count, findItem }) {
               products.map((item, index) => (
                 <div className="productCard">
                   <div className="favoriteDiv">
-                    {console.log(favs)}
                     <Checkbox
                       onClick={() => {
                         dispatch(handleFavorite(item));
