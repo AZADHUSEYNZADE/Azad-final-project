@@ -12,12 +12,13 @@ import emailIcon from "../../assets/Icons/emailIcon.svg";
 import phoneIcon from "../../assets/Icons/phoneIcon.svg";
 import "../../myscssfolder/_variables.scss";
 import "../../myscssfolder/_mixins.scss";
+import iconFooter from "../../assets/Images/Group 5580.png";
 function Footer() {
   return (
     <>
       <div className="mainFooterDiv">
         <div className="footerTitleImg">
-          <img className="footerLogoPic" src={FooterIcon} alt="hi" />
+          <img className="footerLogoPic" src={iconFooter} alt="hi" />
           <div className="socialIcons">
             <img className="instagramIcon" src={instagramIcon} alt="hi" />
             <img className="facebookIcon" src={facebookIcon} alt="hi" />

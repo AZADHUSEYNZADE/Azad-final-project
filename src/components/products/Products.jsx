@@ -15,7 +15,8 @@ import { AiOutlineMenu } from "react-icons/ai";
 import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import Favorite from "@mui/icons-material/Favorite";
 import { useDispatch, useSelector } from "react-redux";
-
+import Backdrop from "@mui/material/Backdrop";
+import CircularProgress from "@mui/material/CircularProgress";
 import {
   handleFavorite,
   selectAllFavorites,
@@ -30,6 +31,7 @@ function Products({ products, count, findItem }) {
   const [allProducts, setAllProducts] = useState([]);
   const [isVisible, setIsVisible] = useState(false);
   const [cost, setCost] = useState(false);
+  const [open, setOpen] = React.useState(true);
 
   const favs = useSelector(selectAllFavorites);
 
@@ -37,7 +39,11 @@ function Products({ products, count, findItem }) {
     const fetchAllProducts = () => {
       Commerce.categories
         .retrieve("mehsullar", { type: "slug", depth: "3" })
-        .then((category) => setAllProducts(category.children))
+        .then((category) => {
+          setAllProducts(category.children);
+          // setOpen(false);
+        })
+
         .catch((error) => {
           console.log("There was an error fetching the products", error);
         });
@@ -48,6 +54,12 @@ function Products({ products, count, findItem }) {
 
   return (
     <>
+      {/* <Backdrop
+        sx={{ color: "#000", opacity: "1", zIndex: "1", background: "white" }}
+        open={open}
+      >
+        <CircularProgress color="inherit" />
+      </Backdrop> */}
       <div>
         <div className="container">
           <ul className="mainGoHomeUl">
@@ -74,7 +86,7 @@ function Products({ products, count, findItem }) {
           {isVisible ? (
             <img src={CancelIcon} alt="cancelImg" />
           ) : (
-            <AiOutlineMenu />
+            <AiOutlineMenu style={{ fontSize: "20px", marginTop: "3px" }} />
           )}
           <span> Filterləmələr</span>
         </div>
@@ -114,7 +126,12 @@ function Products({ products, count, findItem }) {
               <p className="brandCount">
                 Brend <span>({allProducts.length})</span>
               </p>
-              <img className="decrementCount" src={MinusIcon} alt="minus" />
+              <img
+                className="decrementCount"
+                style={{ cursor: "pointer" }}
+                src={MinusIcon}
+                alt="minus"
+              />
             </div>
             <div className="lineOfBrand"></div>
             <div className="allNameCategory">

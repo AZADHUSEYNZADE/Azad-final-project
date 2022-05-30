@@ -13,6 +13,7 @@ import { selectCart } from "../../features/cartSlice";
 import { useSelector } from "react-redux";
 import { selectAllFavorites } from "../../features/favoriteSlice";
 import Search from "../../assets/Images/search.svg";
+import mobileImg from "../../assets/Images/Group 5580.png";
 const Navbar = ({ setShowSidebar }) => {
   const cart = useSelector(selectCart);
   const favorites = useSelector(selectAllFavorites);
@@ -59,10 +60,13 @@ const Navbar = ({ setShowSidebar }) => {
                 <div></div>
               </div>
               <span className="project">
-                Project <span className="cancel-X">X</span>
+                <img src={mobileImg} alt="img" />
+                {/* Project <span className="cancel-X">X</span> */}
               </span>
               <img className="search-Img" src={Search} alt="search" />
-              <img className="telloImg" src={Tello} alt="Tello" />
+              <Link to="/">
+                <img className="telloImg" src={Tello} alt="Tello" />
+              </Link>
             </div>
 
             <div className="desktop-search">
@@ -94,7 +98,8 @@ const Navbar = ({ setShowSidebar }) => {
               <ul className="nav-links">
                 <div className="true-X">
                   <span className="project">
-                    Project <span className="cancel-X">X</span>
+                    <img src={mobileImg} alt="img" />
+                    {/* Project <span className="cancel-X">X</span> */}
                   </span>
                   <img className="search-Img" src={Search} alt="search" />
                 </div>
