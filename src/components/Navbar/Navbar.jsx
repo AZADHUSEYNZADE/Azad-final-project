@@ -60,8 +60,9 @@ const Navbar = ({ setShowSidebar }) => {
                 <div></div>
               </div>
               <span className="project">
-                <img src={mobileImg} alt="img" />
-                {/* Project <span className="cancel-X">X</span> */}
+                <Link to="/">
+                  <img src={mobileImg} alt="img" />
+                </Link>
               </span>
               <img className="search-Img" src={Search} alt="search" />
               <Link to="/">
@@ -74,7 +75,7 @@ const Navbar = ({ setShowSidebar }) => {
             </div>
             <div className="nav-elements">
               <Link to="login">
-                <PersonOutlineOutlinedIcon />
+                <PersonOutlineOutlinedIcon style={{ marginTop: "7px" }} />
               </Link>
               <Link to="my-orders">
                 <IconButton aria-label="cart">
@@ -96,22 +97,56 @@ const Navbar = ({ setShowSidebar }) => {
           {isOpen && (
             <div className="mobileMenuDiv">
               <ul className="nav-links">
-                <div className="true-X">
-                  <span className="project">
-                    <img src={mobileImg} alt="img" />
-                    {/* Project <span className="cancel-X">X</span> */}
-                  </span>
-                  <img className="search-Img" src={Search} alt="search" />
+                <div
+                  style={{ display: "flex", justifyContent: "space-between" }}
+                >
+                  <div
+                    className="true-X"
+                    style={{ position: "absolute", left: "65px" }}
+                  >
+                    <Link to="/">
+                      <img src={mobileImg} alt="img" />
+                    </Link>
+                  </div>
+                  <div style={{ position: "absolute", right: "10px" }}>
+                    <div className="nav-elements">
+                      <Link to="login">
+                        <PersonOutlineOutlinedIcon />
+                      </Link>
+                      <Link to="my-orders">
+                        <IconButton aria-label="cart">
+                          <Link to="my-favorite-products">
+                            <Badge
+                              badgeContent={favorites?.length}
+                              color="secondary"
+                            >
+                              <FavoriteBorderOutlinedIcon />
+                            </Badge>
+                          </Link>
+                        </IconButton>
+                      </Link>
+
+                      <Link to="basket">
+                        <Badge badgeContent={cartCount} color="primary">
+                          <ShoppingCartOutlinedIcon />
+                        </Badge>
+                      </Link>
+                    </div>
+                  </div>
                 </div>
 
                 {allProducts.map((item, i) => (
-                  <li className="parentLi" key={i}>
+                  <li
+                    // className="parentLi"
+                    className={item.name === "All" ? "mTop" : "parentLi"}
+                  >
                     <Link to={`/products/${item.name.toLowerCase()}`}>
                       {item.name}
                     </Link>
                   </li>
                 ))}
               </ul>
+
               <div
                 style={{
                   width: "100%",

@@ -171,14 +171,11 @@ nav {
         color: red;
       }
       .search-Img {
-        display: block;
-        margin-left: 120px;
+        display: none;
         cursor: pointer;
       }
     }
-    .nav-elements {
-      display: none;
-    }
+
     .mobile-search {
       display: none;
     }
@@ -203,6 +200,16 @@ nav {
       height: 100vh;
       display: flex;
       flex-direction: column;
+      .mTop {
+        font-size: 20px;
+        line-height: 28px;
+        color: #4f4f4f;
+        padding: 22px 0px;
+        display: flex;
+        flex-direction: row;
+        cursor: pointer;
+        margin-top: 100px;
+      }
       .true-X {
         display: flex;
         flex-direction: row;
